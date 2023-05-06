@@ -2,6 +2,7 @@
   "name": "student-portfolio",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +10,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@citation-js/core": "^0.6.5",
+    "@citation-js/plugin-bibtex": "^0.6.6",
+    "@citation-js/plugin-csl": "^0.6.7",
+    "@citation-js/plugin-doi": "^0.6.6",
+    "@contentful/rich-text-react-renderer": "^15.16.3",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
+    "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/recipes": "^0.4.0",
+    "@vanilla-extract/sprinkles": "^1.6.0",
+    "classnames": "^2.3.2",
+    "contentful": "^10.1.0",
+    "contentful-management": "10.32.0",
+    "dotenv-safe": "^8.2.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
+    "lucide-react": "^0.176.0",
+    "netlify-cms": "^2.10.192",
+    "next": "13.3.1-canary.10",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@vanilla-extract/next-plugin": "^2.1.2"
   }
 }

@@ -1,0 +1,69 @@
+import { recipe } from "@vanilla-extract/recipes";
+import { vars } from "~/theme.css";
+import { sprinkles } from "~/sprinkles/index.css";
+
+export const Section = recipe({
+  base: {
+    paddingLeft: vars.space[3],
+    paddingRight: vars.space[3],
+  },
+  variants: {
+    colors: {
+      primary: {
+        background: vars.color.background.inverted,
+        color: vars.color.text.inverted,
+      },
+      "surface-01": {
+        background: vars.color.background["surface-01"],
+      },
+      white: {
+        background: vars.color.background.body,
+      },
+    },
+    prominance: {
+      normal: {
+        paddingTop: vars.space[6],
+        paddingBottom: vars.space[6],
+      },
+      focus: sprinkles({
+        paddingY: [6, 6, 8],
+      }),
+      center: {
+        paddingTop: vars.space[6],
+        paddingBottom: vars.space[6],
+      },
+    },
+  },
+});
+
+export const Content = recipe({
+  base: {
+    margin: "0 auto",
+    maxWidth: "67rem",
+  },
+  variants: {
+    prominance: {
+      normal: {},
+      focus: {},
+      center: {
+        maxWidth: "53rem",
+        display: "flex",
+        flexDirection: "column",
+        gap: vars.space[2],
+        justifyContent: "center",
+        alignItems: "center",
+      },
+    },
+  },
+});
+
+export const Title = recipe({
+  base: sprinkles({ headingStyle: "title", marginTop: 0 }),
+  variants: {
+    prominance: {
+      normal: {},
+      focus: {},
+      center: {},
+    },
+  },
+});
