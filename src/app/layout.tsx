@@ -2,14 +2,13 @@ import { fetchFeaturedProject, fetchStudent } from "~/actions";
 
 import { Playfair_Display, Inter } from "next/font/google";
 import "normalize.css";
-import { themeClass } from "../theme.css";
+import { palette, themeClass } from "../theme.css";
 import * as styles from "./layout.css";
 import { Box } from "~/widgets/box";
 import Link from "next/link";
 import NavBar from "~/widgets/nav-bar";
 import { SocialLink } from "~/widgets/icon-link";
 import { Metadata } from "next";
-import Head from "next/head";
 import "./tmp.css";
 
 const headingFont = Playfair_Display({
@@ -30,6 +29,33 @@ export const generateMetadata = async (): Promise<Metadata> => {
     title: student.name,
     description: student.briefBio,
     keywords: student.interests,
+    themeColor: palette.primary[800],
+    manifest: "/site.webmanifest",
+    icons: [
+      {
+        url: "/favicon.ico",
+        rel: "shortcut icon",
+        type: "image/x-icon",
+      },
+      {
+        url: "/favicon-32x32.png",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png",
+      },
+      {
+        url: "/favicon-16x16.png",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png",
+      },
+      {
+        url: "/apple-touch-icon.png",
+        type: "image/png",
+        sizes: "180x180",
+        rel: "apple-touch-icon",
+      },
+    ],
   };
 };
 
@@ -58,29 +84,6 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
       lang="en"
       className={`${bodyFont.variable} ${headingFont.variable} ${themeClass}`}
     >
-      <Head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#00aba9" />
-        <meta name="theme-color" content="#ffffff" />
-      </Head>
       <Box
         as="body"
         color="body"

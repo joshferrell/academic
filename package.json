@@ -29,6 +29,7 @@
     "contentful": "^10.1.0",
     "contentful-management": "10.32.0",
     "dotenv-safe": "^8.2.0",
+    "encoding": "^0.1.13",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "lucide-react": "^0.176.0",
