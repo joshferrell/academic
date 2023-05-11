@@ -116,6 +116,7 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
                 as="ul"
                 marginX="auto"
                 marginY={0}
+                padding={0}
                 maxWidth="container"
                 gap={[0.125, 0.5]}
                 flexWrap="wrap"
