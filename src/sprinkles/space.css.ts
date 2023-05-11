@@ -43,3 +43,16 @@ export const marginSystem = defineProperties({
     marginY: ["marginTop", "marginBottom"],
   },
 });
+
+export const radiusSystem = defineProperties({
+  conditions: {
+    mobile: {},
+    tablet: { "@media": "screen and (min-width: 768px)" },
+    desktop: { "@media": "screen and (min-width: 1024px)" },
+  },
+  defaultCondition: "mobile",
+  responsiveArray: ["mobile", "tablet", "desktop"],
+  properties: {
+    borderRadius: vars.radius,
+  },
+});

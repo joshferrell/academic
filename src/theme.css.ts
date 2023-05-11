@@ -1,6 +1,6 @@
 import { createTheme, globalStyle } from "@vanilla-extract/css";
 
-const palette = {
+export const palette = {
   primary: {
     800: "#10251B",
     600: "#1E4C34",
@@ -8,14 +8,6 @@ const palette = {
     300: "#6A9E82",
     200: "#A5C5AD",
     100: "#C3DeD5",
-  },
-  secondary: {
-    800: "#AA4b00",
-    600: "#D97300",
-    400: "#FF8A00",
-    300: "#FFAB36",
-    200: "#FFC875",
-    100: "#FFE3b3",
   },
   neutral: {
     50: "#fafafa",
@@ -38,6 +30,7 @@ export const [themeClass, vars] = createTheme({
       body: palette.neutral[50],
       "surface-01": palette.primary[200],
       inverted: palette.primary[800],
+      footer: palette.neutral[200],
     },
     text: {
       body: palette.primary[800],
@@ -57,8 +50,7 @@ export const [themeClass, vars] = createTheme({
       primary: palette.primary[600],
       primaryHover: palette.primary[400],
       primaryText: palette.neutral[100],
-      secondary: palette.secondary[600],
-      secondaryHover: palette.secondary[400],
+      secondaryHover: palette.primary[200],
       secondaryText: palette.neutral[100],
     },
   },
@@ -110,6 +102,7 @@ export const [themeClass, vars] = createTheme({
     0.125: "0.125rem",
     0.25: "0.25rem",
     0.5: "0.5rem",
+    0.75: "0.75rem",
     1: "1rem",
     2: "1.5rem",
     3: "2rem",
@@ -125,6 +118,8 @@ export const [themeClass, vars] = createTheme({
     0: "0rem",
     sm: "0.25rem",
     md: "0.5rem",
+    lg: "1rem",
+    xl: "2rem",
     all: "999999999px",
   },
 });

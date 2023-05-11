@@ -9,7 +9,7 @@ import { sprinkles, type Sprinkles } from "~/sprinkles/index.css";
 
 type ElementProps = Omit<
   AllHTMLAttributes<HTMLElement>,
-  "as" | "color" | "width" | "display"
+  "as" | "color" | "width" | "display" | "height"
 >;
 
 export interface BoxProps extends ElementProps, Sprinkles {
@@ -17,56 +17,64 @@ export interface BoxProps extends ElementProps, Sprinkles {
 }
 
 export const Box = forwardRef<HTMLElement, BoxProps>(
-  ({
-    as = "div",
+  (
+    {
+      as = "div",
 
-    //text system
-    textStyle,
-    headingStyle,
+      //text system
+      textStyle,
+      headingStyle,
 
-    //spacing system
-    padding,
-    paddingTop,
-    paddingBottom,
-    paddingRight,
-    paddingLeft,
-    paddingX,
-    paddingY,
-    margin,
-    marginTop,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    marginX,
-    marginY,
+      //spacing system
+      padding,
+      paddingTop,
+      paddingBottom,
+      paddingRight,
+      paddingLeft,
+      paddingX,
+      paddingY,
+      margin,
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight,
+      marginX,
+      marginY,
 
-    // width system
-    maxWidth,
-    width,
+      // width system
+      maxWidth,
+      width,
 
-    //color system
-    backgroundColor,
-    color,
-    bg,
+      //color system
+      backgroundColor,
+      color,
+      bg,
 
-    //flex system
-    flex,
-    flexDirection,
-    flexWrap,
-    justifyContent,
-    alignItems,
-    gap,
-    display,
+      //flex system
+      flex,
+      flexDirection,
+      flexWrap,
+      justifyContent,
+      alignItems,
+      gap,
+      display,
+      gridTemplateRows,
+      gridTemplateColumns,
+      borderRadius,
+      height,
 
-    //override props
-    className,
-    ...htmlProps
-  }) => {
+      //override props
+      className,
+      ...htmlProps
+    },
+    ref
+  ) => {
     const atomClasses = classnames(
       className,
       sprinkles({
         textStyle,
         backgroundColor,
+        height,
         color,
         bg,
         headingStyle,
@@ -86,6 +94,9 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
         display,
         margin,
         marginTop,
+        gridTemplateRows,
+        gridTemplateColumns,
+        borderRadius,
         marginBottom,
         marginLeft,
         marginRight,
@@ -96,7 +107,7 @@ export const Box = forwardRef<HTMLElement, BoxProps>(
       })
     );
 
-    return createElement(as, { className: atomClasses, ...htmlProps });
+    return createElement(as, { className: atomClasses, ref, ...htmlProps });
   }
 );
 

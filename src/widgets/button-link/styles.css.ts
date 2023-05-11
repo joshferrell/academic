@@ -1,14 +1,13 @@
 import { recipe } from "@vanilla-extract/recipes";
+import { sprinkles } from "~/sprinkles/index.css";
 import { vars } from "~/theme.css";
 
 export const button = recipe({
   base: {
-    borderRadius: vars.radius.sm,
     textAlign: "center",
     transition: "all 0.1s ease-in",
     display: "inline-block",
     boxSizing: "border-box",
-    padding: `${vars.space[1]} ${vars.space[3]}`,
     textDecoration: "none",
     border: "1px solid",
   },
@@ -28,9 +27,36 @@ export const button = recipe({
         borderColor: vars.color.interactive.primary,
         color: vars.color.text.body,
         ":hover": {
-          color: vars.color.interactive.primaryText,
+          color: vars.color.text.body,
           backgroundColor: vars.color.background["surface-01"],
         },
+      },
+      tertiary: {
+        backgroundColor: "transparent",
+        color: vars.color.background["surface-01"],
+        borderColor: vars.color.background["surface-01"],
+        ":hover": {
+          color: vars.color.text.body,
+          backgroundColor: vars.color.background["surface-01"],
+        },
+      },
+    },
+    size: {
+      small: sprinkles({
+        paddingY: 0.125,
+        paddingX: 0.75,
+        textStyle: "small",
+        borderRadius: "all",
+      }),
+      medium: sprinkles({
+        paddingY: 0.5,
+        paddingX: 1,
+        textStyle: "base",
+        borderRadius: "all",
+      }),
+      normal: {
+        borderRadius: vars.radius.sm,
+        padding: `${vars.space[1]} ${vars.space[3]}`,
       },
     },
   },

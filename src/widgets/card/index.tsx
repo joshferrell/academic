@@ -1,7 +1,7 @@
 import { ElementType } from "react";
 import { Box } from "~/widgets/box";
 import { card } from "./style.css";
-import { FlexSystem, WidthSystem } from "~/sprinkles/index.css";
+import { FlexSystem, WidthSystem, MarginSystem } from "~/sprinkles/index.css";
 
 type PropTypes = FlexSystem &
   WidthSystem & {
@@ -15,13 +15,19 @@ const Card = ({ children, variant = "primary", ...systemProps }: PropTypes) => (
   </Box>
 );
 
-type CardTitleProps = {
+type CardTitleProps = MarginSystem & {
   title: string;
   as?: ElementType;
 };
 
-const CardTitle = ({ title, as = "h2" }: CardTitleProps) => (
-  <Box as={as} headingStyle="subtitle" margin={0}>
+const CardTitle = ({ title, as = "h2", ...boxProps }: CardTitleProps) => (
+  <Box
+    as={as}
+    headingStyle="subtitle"
+    margin={0}
+    marginBottom={0.5}
+    {...boxProps}
+  >
     {title}
   </Box>
 );

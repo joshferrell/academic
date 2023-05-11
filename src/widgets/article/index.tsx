@@ -5,6 +5,8 @@ import { Box } from "~/widgets/box";
 
 type PropTypes = {
   title: string;
+  size?: "large" | "medium";
+  tag?: string;
   summary: string;
   href: string;
   date?: string;
@@ -18,6 +20,8 @@ type PropTypes = {
 export const Article = ({
   title,
   summary,
+  tag,
+  size = "medium",
   href,
   date,
   image,
@@ -25,33 +29,56 @@ export const Article = ({
 }: PropTypes) => (
   <Box
     as="article"
-    display="flex"
+    display={image ? ["flex", "grid"] : "block"}
     gap={[0.5, 4]}
-    flexDirection={["column", "row"]}
+    gridTemplateRows={size === "medium" ? "sm" : ["md", "md", "lg"]}
+    gridTemplateColumns={size === "medium" ? "sm" : ["md", "md", "lg"]}
+    flexDirection="column"
   >
     {image && (
-      <div>
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={200}
-          height={200}
-          style={{ borderRadius: vars.radius.md }}
-        />
-      </div>
+      <Link href={href}>
+        <Box
+          height={size === "medium" ? ["sm", "md"] : ["md", "lg"]}
+          borderRadius="md"
+          backgroundColor="surface-01"
+          style={{
+            position: "relative",
+            maxHeight: "100%",
+          }}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill={true}
+            style={{ borderRadius: vars.radius.md, objectFit: "cover" }}
+          />
+        </Box>
+      </Link>
     )}
     <div>
       {date && <Box style={{ fontWeight: 600 }}>{date}</Box>}
-      <Box as="h3" headingStyle="subtitle" marginBottom={0.5} marginTop={0}>
+      {tag && <Box headingStyle="subtitle">{tag}</Box>}
+      <Box
+        as="h3"
+        headingStyle={size === "medium" ? "subtitle" : "title"}
+        marginBottom={size === "medium" ? 0.5 : 1}
+        marginTop={0}
+      >
         <Link href={href} style={{ color: "inherit" }}>
           {title}
         </Link>
       </Box>
-      <Box as="p" margin={0}>
+      <Box as="p" margin={0} textStyle={size === "medium" ? "base" : "large"}>
         {summary}
       </Box>
       {cta && (
-        <Box as={Link} marginTop={0.5} display="block" href={href}>
+        <Box
+          as={Link}
+          marginTop={size === "medium" ? 0.5 : 2}
+          display="block"
+          href={href}
+          textStyle={size === "medium" ? "base" : "large"}
+        >
           View project
         </Box>
       )}

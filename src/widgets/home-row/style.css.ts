@@ -26,11 +26,16 @@ export const Section = recipe({
         paddingBottom: vars.space[6],
       },
       focus: sprinkles({
-        paddingY: [6, 6, 8],
+        paddingBottom: [6, 6, 8],
+        paddingTop: [4, 4, 6],
       }),
       center: {
         paddingTop: vars.space[6],
         paddingBottom: vars.space[6],
+      },
+      small: {
+        paddingTop: vars.space[1],
+        paddingBottom: vars.space[1],
       },
     },
   },

@@ -1,67 +1,49 @@
-import { createClient } from "contentful";
+import { fetchFeaturedProject, fetchProjectList } from "~/actions";
+
 import { Box } from "~/widgets/box";
 import HomeRow from "~/widgets/home-row";
 import { Article } from "~/widgets/article";
-
-type Project = {
-  id: string;
-  name: string;
-  tags: { id: string; title: string }[];
-  img?: { src: string; alt: string };
-  summary: string;
-  activeCollaborators: string[];
-};
-
-const fetchProjects = async (): Promise<Project[]> => {
-  const client = createClient({
-    accessToken: process.env.CONTENFUL_DELIVERY_TOKEN!,
-    space: process.env.CONTENTFUL_SPACE_ID!,
-  });
-
-  const entries = await client.getEntries({
-    content_type: "project",
-    locale: "en-US",
-    "fields.feature": true,
-  });
-
-  if (!entries.items) return [];
-
-  return entries.items.map((entry) => ({
-    id: entry.sys.id,
-    name: entry.fields.title,
-    summary: entry.fields.summary,
-    // @ts-ignore
-    tags: entry.fields.tags?.map((x) => ({
-      title: x.fields.title,
-      id: x.sys.id,
-    })),
-    img: entry.fields.featuredImage
-      ? {
-          src: `https:${(entry.fields.featuredImage as any).fields.file.url}`,
-          alt: (entry.fields.featuredImage as any).fields.description,
-        }
-      : undefined,
-  })) as Project[];
-};
+import { ProjectCard } from "~/widgets/project-card";
 
 const ProjectList = async () => {
-  const projectList = await fetchProjects();
+  const [projectList, featuredProject] = await Promise.all([
+    fetchProjectList(true),
+    fetchFeaturedProject(),
+  ]);
 
   if (!projectList.length) return null;
 
   return (
-    <HomeRow background="surface-01" prominance="center">
+    <HomeRow background="surface-01">
       <HomeRow.Title>Projects</HomeRow.Title>
-      <Box display="flex" flexDirection="column" gap={2}>
-        {projectList.map((x) => (
+      {featuredProject && (
+        <Box marginBottom={2}>
           <Article
-            image={x.img}
-            key={x.name}
-            cta="View project"
-            href={`/projects/${x.id}`}
-            title={x.name}
-            summary={x.summary}
+            tag={
+              Boolean(featuredProject.tags.length)
+                ? featuredProject.tags[0].title
+                : undefined
+            }
+            title={featuredProject.name}
+            summary={featuredProject.summary}
+            href={`/projects/${featuredProject.id}`}
+            size="large"
+            image={featuredProject.img}
+            cta="View Project"
           />
+        </Box>
+      )}
+      <Box
+        display={["flex"]}
+        flexDirection={["column", "row"]}
+        flexWrap="wrap"
+        justifyContent="center"
+        gap={2}
+        marginBottom={3}
+        style={{ gridTemplateColumns: "repeat(3, 1fr)", width: "100%" }}
+      >
+        {projectList.map((x) => (
+          <ProjectCard size="large" project={x} key={x.id} />
         ))}
       </Box>
       <HomeRow.CTA href="/projects">View all projects</HomeRow.CTA>

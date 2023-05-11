@@ -3,6 +3,7 @@ import { defineProperties } from "@vanilla-extract/sprinkles";
 const properties = {
   full: "100%",
   container: "67rem",
+  200: "200",
   "30%": "30%",
 };
 

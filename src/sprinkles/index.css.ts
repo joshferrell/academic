@@ -1,6 +1,6 @@
 import { createSprinkles } from "@vanilla-extract/sprinkles";
 
-import { paddingSystem, marginSystem } from "./space.css";
+import { paddingSystem, marginSystem, radiusSystem } from "./space.css";
 import { textSystem, headingSystem } from "./text.css";
 import { backgroundSystem, colorSystem } from "./colors.css";
 import { maxWidth, width } from "./width.css";
@@ -9,6 +9,7 @@ import { flex, display } from "./flex.css";
 export const sprinkles = createSprinkles(
   paddingSystem,
   marginSystem,
+  radiusSystem,
   textSystem,
   headingSystem,
   colorSystem,
@@ -39,6 +40,7 @@ export type SpacingSystem = Pick<
   | "marginX"
   | "marginY"
 >;
+export type ColorSystem = Pick<Sprinkles, "color">;
 export type MarginSystem = Pick<
   Sprinkles,
   | "margin"

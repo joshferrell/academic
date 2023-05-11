@@ -8,7 +8,8 @@ type PropTypes = MarginSystem &
     href: string;
     isExternal?: boolean;
     children: React.ReactNode;
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "tertiary";
+    size?: "normal" | "small" | "medium";
   };
 
 export const ButtonLink = ({
@@ -16,9 +17,10 @@ export const ButtonLink = ({
   isExternal = false,
   children,
   variant = "primary",
+  size = "normal",
   ...classProps
 }: PropTypes) => {
-  const styles = classNames(button({ variant }), sprinkles(classProps));
+  const styles = classNames(button({ variant, size }), sprinkles(classProps));
 
   if (!isExternal) {
     return (
