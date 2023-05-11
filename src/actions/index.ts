@@ -333,7 +333,6 @@ export const fetchProject = async (id: string): Promise<Project> => {
   ]);
 
   const project = formatProject(entries[0]);
-  console.log(project);
   return Object.assign(project, {
     grantList,
     presentationList,
