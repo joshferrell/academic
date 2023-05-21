@@ -9,7 +9,6 @@ import Link from "next/link";
 import NavBar from "~/widgets/nav-bar";
 import { SocialLink } from "~/widgets/icon-link";
 import { Metadata } from "next";
-import "./tmp.css";
 
 const headingFont = Playfair_Display({
   subsets: ["latin"],
