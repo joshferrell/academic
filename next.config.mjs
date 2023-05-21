@@ -14,7 +14,7 @@ const nextConfig = {
     domains: ["images.ctfassets.net"],
   },
   webpack: (config) => {
-    config.optimizations.splitChunks = false;
+    config.optimization.splitChunks = false;
     return config;
   },
 };
