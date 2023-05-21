@@ -13,6 +13,9 @@ export const Section = recipe({
         background: vars.color.background.inverted,
         color: vars.color.text.inverted,
       },
+      transparent: {
+        background: "transparent",
+      },
       "surface-01": {
         background: vars.color.background["surface-01"],
       },

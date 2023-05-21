@@ -7,6 +7,7 @@ import { SocialLink } from "~/widgets/icon-link";
 
 import { vars } from "~/theme.css";
 import Image from "next/image";
+import Rainbow from "~/widgets/rainbow";
 
 const Profile = async () => {
   const student = await fetchStudent();
@@ -78,6 +79,7 @@ const Profile = async () => {
           Download CV
         </ButtonLink>
       )}
+      <Rainbow />
     </HomeRow>
   );
 };

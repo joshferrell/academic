@@ -13,6 +13,10 @@ const nextConfig = {
   images: {
     domains: ["images.ctfassets.net"],
   },
+  webpack: (config) => {
+    config.optimization.splitChunks = false;
+    return config;
+  },
 };
 
 export default withVanillaExtract(nextConfig);
