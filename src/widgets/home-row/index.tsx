@@ -41,14 +41,23 @@ const CTA = ({
   children: React.ReactNode;
   href: string;
 }) => (
-  <Box as={Link} textStyle="large" display="block" href={href}>
-    {children}
+  <Box
+    as={Link}
+    textStyle="large"
+    display="flex"
+    href={href}
+    alignItems="center"
+    justifyContent="flex-start"
+  >
+    <div>{children}</div>
     <ArrowRight
       size={vars.font.textSize.large}
       style={{
         display: "inline-block",
         marginBottom: "-0.125rem",
         marginLeft: vars.space["0.25"],
+        height: "1.125rem",
+        width: "1.125rem",
       }}
     />
   </Box>
