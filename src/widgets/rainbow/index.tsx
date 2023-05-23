@@ -6,11 +6,7 @@ import { Gradient } from "stripe-gradient";
 
 import "./style.css";
 
-type PropTypes = {
-  children: React.ReactNode;
-};
-
-const Background = ({ children }: PropTypes) => {
+const Background = () => {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

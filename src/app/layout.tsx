@@ -1,6 +1,6 @@
 import { fetchFeaturedProject, fetchStudent } from "~/actions";
 
-import { Playfair_Display, Inter } from "next/font/google";
+import { Unbounded, Inter } from "next/font/google";
 import "normalize.css";
 import { palette, themeClass } from "../theme.css";
 import * as styles from "./layout.css";
@@ -11,7 +11,7 @@ import { SocialLink } from "~/widgets/icon-link";
 import { Metadata } from "next";
 import "./tmp.css";
 
-const headingFont = Playfair_Display({
+const headingFont = Unbounded({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",

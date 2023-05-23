@@ -13,6 +13,16 @@ export const backgroundSystem = defineProperties({
 
 export const colorSystem = defineProperties({
   properties: {
-    color: vars.color.text,
+    color: Object.assign(vars.color.text, {
+      gradient: {
+        backgroundColor: "#fffd99",
+        backgroundImage: "linear-gradient(45deg, #fffd99, #ffba27)",
+        backgroundSize: "100%",
+        "-webkit-text-fill-color": "transparent",
+        "-moz-text-fill-color": "transparent",
+        backgroundRepeat: "repeat",
+        backgroundClip: "text",
+      },
+    }),
   },
 });

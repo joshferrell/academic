@@ -22,6 +22,11 @@ export const Section = recipe({
       white: {
         background: vars.color.background.body,
       },
+      blur: {
+        background: "rgba(255, 255, 255, .15)",
+        backdropFilter: "blur(5px)",
+        color: vars.color.text.body,
+      },
     },
     prominance: {
       normal: {
@@ -52,7 +57,9 @@ export const Content = recipe({
   variants: {
     prominance: {
       normal: {},
-      focus: {},
+      focus: {
+        alignItems: "flex-start",
+      },
       center: {
         maxWidth: "53rem",
         display: "flex",

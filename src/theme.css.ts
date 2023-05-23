@@ -2,12 +2,12 @@ import { createTheme, globalStyle } from "@vanilla-extract/css";
 
 export const palette = {
   primary: {
-    800: "#10251B",
-    600: "#1E4C34",
-    400: "#39755A",
-    300: "#6A9E82",
-    200: "#A5C5AD",
-    100: "#C3DeD5",
+    800: "#005072",
+    600: "#0073A0",
+    400: "#0095CF",
+    300: "#59B9E6",
+    200: "#96E2FF",
+    100: "#C3F0FF",
   },
   neutral: {
     50: "#fafafa",

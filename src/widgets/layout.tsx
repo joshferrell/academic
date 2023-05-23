@@ -22,7 +22,12 @@ type PageHeaderProps = {
 
 const Header = ({ title, subtitle, img, children }: PageHeaderProps) => (
   <HomeRow prominance="focus" background="primary">
-    <Box as="h1" headingStyle={["superMobile", "super"]} margin="none">
+    <Box
+      color="gradient"
+      as="h1"
+      headingStyle={["superMobile", "super"]}
+      margin="none"
+    >
       {title}
     </Box>
     {subtitle && (
