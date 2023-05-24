@@ -11,8 +11,17 @@ const Background = () => {
 
   useEffect(() => {
     if (!ref.current) return;
+    let mediaQuery;
+
+    if (window) {
+      mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    }
+
     const gradient = new Gradient();
-    gradient.initGradient("#gradient-canvas");
+
+    if (!mediaQuery || !mediaQuery.matches) {
+      gradient.initGradient("#gradient-canvas");
+    }
 
     return () => {
       gradient.disconnect();

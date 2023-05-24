@@ -35,7 +35,7 @@ const Profile = async () => {
             style={{ borderRadius: vars.radius.lg }}
           />
           <div>
-            <Box textStyle="large" color="secondary">
+            <Box textStyle="large" color="body">
               {student.role}
             </Box>
             <Box

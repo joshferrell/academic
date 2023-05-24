@@ -23,8 +23,8 @@ export const Section = recipe({
         background: vars.color.background.body,
       },
       blur: {
-        background: "rgba(255, 255, 255, .15)",
-        backdropFilter: "blur(5px)",
+        background: "rgba(255, 255, 255, 0.4)",
+        backdropFilter: "blur(33px)",
         color: vars.color.text.body,
       },
     },
