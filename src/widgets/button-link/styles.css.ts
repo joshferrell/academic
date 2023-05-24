@@ -21,6 +21,9 @@ export const button = recipe({
           color: vars.color.interactive.primaryText,
           backgroundColor: vars.color.interactive.primaryHover,
         },
+        ":focus": {
+          outlineOffset: "2px",
+        },
       },
       secondary: {
         backgroundColor: vars.color.background.body,

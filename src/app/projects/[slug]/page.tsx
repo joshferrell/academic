@@ -95,7 +95,7 @@ const Page = async ({ params }: PropTypes) => {
           as="ul"
           display="flex"
           flexWrap="wrap"
-          gap={2}
+          gap={1}
           marginTop={5}
           padding={0}
           style={{ listStyleType: "none" }}
