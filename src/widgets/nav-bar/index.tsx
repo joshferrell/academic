@@ -86,7 +86,7 @@ const NavBar = ({ project }: PropTypes) => {
     <Box
       backgroundColor="inverted"
       color="inverted"
-      paddingTop={2}
+      paddingY={2}
       paddingX={[0, 2]}
       style={{ boxSizing: "border-box" }}
     >

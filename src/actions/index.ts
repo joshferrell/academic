@@ -17,7 +17,7 @@ type Tag = {
   title: string;
 };
 
-export type SocialIcon = "Linkedin" | "Mail";
+export type SocialIcon = "Linkedin" | "Mail" | "Calendar";
 
 export type Collaborator = {
   name: string;

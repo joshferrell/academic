@@ -4,7 +4,7 @@ import * as styles from "./style.css";
 import { ArrowRight } from "lucide-react";
 import { vars } from "~/theme.css";
 
-type RowBackgrounds = "primary" | "surface-01" | "white";
+type RowBackgrounds = "primary" | "surface-01" | "white" | "blur";
 type Prominance = "normal" | "focus" | "center";
 
 type PropTypes = {
