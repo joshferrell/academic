@@ -63,8 +63,8 @@ export type Project = {
   presentationList?: Presentation[];
   publicationList?: { [category: string]: Publication[] };
   postList: Post[];
-  activeAssitants: Collaborator[];
-  pastAssitants: Collaborator[];
+  activeAssistants: Collaborator[];
+  pastAssistants: Collaborator[];
   primaryCollaborators: Collaborator[];
 };
 
@@ -342,8 +342,8 @@ const formatProject = (
     primaryCollaborators: formatCollaboratorList(
       entry.fields.primaryCollaborators
     ),
-    pastAssitants: formatCollaboratorList(entry.fields.pastAssitants),
-    activeAssitants: formatCollaboratorList(entry.fields.activeAssitants),
+    pastAssistants: formatCollaboratorList(entry.fields.pastAssitants),
+    activeAssistants: formatCollaboratorList(entry.fields.activeAssistants),
     img: entry.fields.featuredImage
       ? {
           src: `https:${(entry.fields.featuredImage as any).fields.file.url}`,
@@ -484,7 +484,8 @@ const formatCollaborator = (
   } as Collaborator);
 
 const formatCollaboratorList = (x: any): Collaborator[] => {
-  if (!x || !(x as any).fields?.name) return [];
+  if (!x || !x.length) return [];
+  if (!x[0].fields.name) return [];
   return x.map(formatCollaborator);
 };
 

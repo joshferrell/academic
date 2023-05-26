@@ -124,10 +124,10 @@ const Page = async ({ params }: PropTypes) => {
           <CollabList collabList={project.primaryCollaborators} />
         </HomeRow>
       )}
-      {Boolean(project.activeAssitants.length) && (
+      {Boolean(project.activeAssistants.length) && (
         <HomeRow background="white">
           <HomeRow.Title>Active Research Assitants</HomeRow.Title>
-          <CollabList collabList={project.activeAssitants} />
+          <CollabList collabList={project.activeAssistants} />
         </HomeRow>
       )}
       {hasPublications && (
@@ -180,10 +180,10 @@ const Page = async ({ params }: PropTypes) => {
           </PageLayout.List>
         </HomeRow>
       )}
-      {Boolean(project.pastAssitants.length) && (
+      {Boolean(project.pastAssistants.length) && (
         <HomeRow background="white">
           <HomeRow.Title>Past Research Assitants</HomeRow.Title>
-          <CollabList collabList={project.pastAssitants} />
+          <CollabList collabList={project.pastAssistants} />
         </HomeRow>
       )}
     </PageLayout>
