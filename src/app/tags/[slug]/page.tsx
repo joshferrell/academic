@@ -16,13 +16,20 @@ type PropTypes = {
 
 const Page = async ({ params }: PropTypes) => {
   const slug = params?.slug || "";
-  const { projectList, eventList, publicationList, title, description } =
-    await fetchTag(slug);
+  const {
+    projectList,
+    eventList,
+    publicationList,
+    postList,
+    title,
+    description,
+  } = await fetchTag(slug);
 
   const hasPublications =
     publicationList && Boolean(Object.keys(publicationList).length);
   const hasProjects = projectList && Boolean(projectList.length);
   const hasPresentations = eventList && Boolean(eventList.length);
+  const hasPosts = postList && Boolean(postList.length);
 
   return (
     <PageLayout>
@@ -69,6 +76,23 @@ const Page = async ({ params }: PropTypes) => {
           <PageLayout.List>
             <PublicationList publicationList={publicationList} />
           </PageLayout.List>
+        </HomeRow>
+      )}
+      {hasPosts && (
+        <HomeRow prominance="center" background="white">
+          <HomeRow.Title>Posts</HomeRow.Title>
+          <Box display="flex" gap={2} flexDirection="column">
+            {postList.map((e) => (
+              <Article
+                key={e.id}
+                image={e.img}
+                title={e.title}
+                summary={e.description}
+                href={`/posts/${e.id}`}
+                tag={e.tags.length ? e.tags[0].title : undefined}
+              />
+            ))}
+          </Box>
         </HomeRow>
       )}
     </PageLayout>

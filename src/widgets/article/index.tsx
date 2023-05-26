@@ -34,6 +34,7 @@ export const Article = ({
     gridTemplateRows={size === "medium" ? "sm" : ["md", "md", "lg"]}
     gridTemplateColumns={size === "medium" ? "sm" : ["md", "md", "lg"]}
     flexDirection="column"
+    width="full"
   >
     {image && (
       <Link href={href}>
@@ -57,7 +58,14 @@ export const Article = ({
     )}
     <div>
       {date && <Box style={{ fontWeight: 600 }}>{date}</Box>}
-      {tag && <Box headingStyle="subtitle">{tag}</Box>}
+      {tag && (
+        <Box
+          headingStyle={size === "medium" ? undefined : "subtitle"}
+          style={{ fontWeight: size === "medium" ? 600 : 400 }}
+        >
+          {tag}
+        </Box>
+      )}
       <Box
         as="h3"
         headingStyle={size === "medium" ? "subtitle" : "title"}

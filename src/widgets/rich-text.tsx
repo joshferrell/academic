@@ -4,6 +4,7 @@ import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
 import { Box } from "./box";
 import Image from "next/image";
+import { vars } from "~/theme.css";
 
 const options = {
   renderNode: {
@@ -25,6 +26,19 @@ const options = {
     ),
     [BLOCKS.HEADING_4]: (_: any, children: any) => (
       <Box as="h4" textStyle="large" style={{ fontWeight: 600 }}>
+        {children}
+      </Box>
+    ),
+    [BLOCKS.QUOTE]: (_: any, children: any) => (
+      <Box
+        paddingLeft={1}
+        marginLeft={2}
+        style={{
+          fontStyle: "italic",
+          borderLeft: "2px solid",
+          borderColor: vars.color.borders.primary,
+        }}
+      >
         {children}
       </Box>
     ),

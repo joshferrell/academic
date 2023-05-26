@@ -62,9 +62,21 @@ export type Project = {
   grantList?: { [year: string]: Grant[] };
   presentationList?: Presentation[];
   publicationList?: { [category: string]: Publication[] };
+  postList: Post[];
   activeAssitants: Collaborator[];
   pastAssitants: Collaborator[];
   primaryCollaborators: Collaborator[];
+};
+
+export type Post = {
+  id: string;
+  title: string;
+  date: string;
+  description: string;
+  img?: { src: string; alt: string };
+  content: EntryFieldTypes.RichText;
+  tags: Tag[];
+  projectList?: Project[];
 };
 
 export type Presentation = {
@@ -134,6 +146,7 @@ export type ContentType =
   | "tags"
   | "publication"
   | "grants-and-awards"
+  | "post"
   | "event";
 
 const fetchEntries = async (
@@ -235,6 +248,37 @@ export const fetchPublicationList = async (
   return sortPublications(entries);
 };
 
+export const fetchPostList = async (limit = 5): Promise<Post[]> => {
+  const entries = await fetchEntries("post", {
+    orderBy: "-sys.updatedAt",
+    limit,
+    select: [
+      "sys.id",
+      "sys.updatedAt",
+      "fields.title",
+      "fields.description",
+      "fields.tags",
+      "fields.featuredImage",
+    ],
+  });
+  if (!entries.length) return [];
+
+  return entries.map(formatPost);
+};
+
+export const fetchPost = async (singleId: string): Promise<Post> => {
+  const entries = await fetchEntries("post", { singleId, limit: 1 });
+
+  if (!entries.length) notFound();
+
+  const post = formatPost(entries[0]);
+  let projectList = [];
+  if (entries[0].fields.relatedProjects)
+    projectList = (entries[0].fields.relatedProjects as any).map(formatProject);
+
+  return Object.assign(post, { projectList });
+};
+
 export const fetchPublication = async (
   singleId: string
 ): Promise<Publication> => {
@@ -315,28 +359,33 @@ export const fetchProject = async (id: string): Promise<Project> => {
 
   if (!entries.length) notFound();
 
-  const [grantList, presentationList, publicationList] = await Promise.all([
-    fetchEntries("grants-and-awards", {
-      filter: { "fields.project.sys.id": id },
-      orderBy: "-fields.year",
-    }).then((x) => {
-      const grantList = x.map(formatGrant);
-      return sortGrants(grantList);
-    }),
-    fetchEntries("event", {
-      filter: { "fields.projects.sys.id": id },
-      orderBy: "-fields.date",
-    }).then((x) => x.map(formatPresentation)),
-    fetchEntries("publication", {
-      filter: { "fields.projects.sys.id": id },
-    }).then((x) => sortPublications(x)),
-  ]);
+  const [grantList, presentationList, publicationList, postList] =
+    await Promise.all([
+      fetchEntries("grants-and-awards", {
+        filter: { "fields.project.sys.id": id },
+        orderBy: "-fields.year",
+      }).then((x) => {
+        const grantList = x.map(formatGrant);
+        return sortGrants(grantList);
+      }),
+      fetchEntries("event", {
+        filter: { "fields.projects.sys.id": id },
+        orderBy: "-fields.date",
+      }).then((x) => x.map(formatPresentation)),
+      fetchEntries("publication", {
+        filter: { "fields.projects.sys.id": id },
+      }).then((x) => sortPublications(x)),
+      fetchEntries("post", {
+        filter: { "fields.relatedProjects.sys.id": id },
+      }).then((x) => x.map(formatPost)),
+    ]);
 
   const project = formatProject(entries[0]);
   return Object.assign(project, {
     grantList,
     presentationList,
     publicationList,
+    postList,
   });
 };
 
@@ -344,6 +393,7 @@ type TagPage = Tag & {
   projectList: Project[];
   eventList: Presentation[];
   publicationList?: { [category: string]: Publication[] };
+  postList: Post[];
 };
 
 export const fetchTag = async (id: string): Promise<TagPage> => {
@@ -354,24 +404,30 @@ export const fetchTag = async (id: string): Promise<TagPage> => {
   if (!entries.length) notFound();
   const entry = entries[0];
 
-  const [projectList, eventList, publicationList] = await Promise.all([
-    fetchEntries("project", {
-      filter: { "fields.tags.sys.id": id },
-    }).then((x) => x.map(formatProject)),
-    fetchEntries("event", {
-      filter: { "fields.tags.sys.id": id },
-      orderBy: "-fields.date",
-    }).then((x) => x.map(formatPresentation)),
-    fetchEntries("publication", {
-      filter: { "fields.tags.sys.id": id },
-    }).then((x) => sortPublications(x)),
-  ]);
+  const [projectList, eventList, publicationList, postList] = await Promise.all(
+    [
+      fetchEntries("project", {
+        filter: { "fields.tags.sys.id": id },
+      }).then((x) => x.map(formatProject)),
+      fetchEntries("event", {
+        filter: { "fields.tags.sys.id": id },
+        orderBy: "-fields.date",
+      }).then((x) => x.map(formatPresentation)),
+      fetchEntries("publication", {
+        filter: { "fields.tags.sys.id": id },
+      }).then((x) => sortPublications(x)),
+      fetchEntries("post", {
+        filter: { "fields.tags.sys.id": id },
+      }).then((x) => x.map(formatPost)),
+    ]
+  );
 
   return {
     id: entry.sys.id,
     title: entry.fields.title as string,
     description: entry.fields.description as string,
     projectList,
+    postList,
     publicationList,
     eventList,
   };
@@ -431,6 +487,21 @@ const formatCollaboratorList = (x: any): Collaborator[] => {
   if (!x || !(x as any).fields?.name) return [];
   return x.map(formatCollaborator);
 };
+
+const formatPost = (x: Entry<EntrySkeletonType, undefined, string>): Post =>
+  ({
+    id: x.sys.id,
+    title: x.fields.title as string,
+    description: x.fields.description as string,
+    tags: formatTags(x.fields.tags),
+    img: x.fields.featuredImage
+      ? {
+          src: `https:${(x.fields.featuredImage as any).fields.file.url}`,
+          alt: (x.fields.featuredImage as any).fields.description,
+        }
+      : undefined,
+    content: x.fields.postContent,
+  } as Post);
 
 const formatPresentation = (
   x: Entry<EntrySkeletonType, undefined, string>

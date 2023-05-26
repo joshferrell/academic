@@ -163,6 +163,23 @@ const Page = async ({ params }: PropTypes) => {
           </PageLayout.List>
         </HomeRow>
       )}
+      {Boolean(project.postList.length) && (
+        <HomeRow background="white">
+          <HomeRow.Title>Related Posts</HomeRow.Title>
+          <PageLayout.List>
+            {project.postList.map((e) => (
+              <Article
+                key={e.id}
+                image={e.img}
+                title={e.title}
+                summary={e.description}
+                href={`/posts/${e.id}`}
+                tag={e.tags.length ? e.tags[0].title : undefined}
+              />
+            ))}
+          </PageLayout.List>
+        </HomeRow>
+      )}
       {Boolean(project.pastAssitants.length) && (
         <HomeRow background="white">
           <HomeRow.Title>Past Research Assitants</HomeRow.Title>
