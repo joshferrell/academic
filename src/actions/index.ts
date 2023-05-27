@@ -4,6 +4,7 @@ import {
   type EntryFieldTypes,
   Entry,
 } from "contentful";
+import queryString from "query-string";
 import { notFound } from "next/navigation";
 
 // @ts-ignore
@@ -172,6 +173,31 @@ const fetchEntries = async (
   const client = createClient({
     accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN!,
     space: process.env.CONTENTFUL_SPACE_ID!,
+    adapter: async (config) => {
+      const params = queryString.stringify(config.params);
+      const url = new URL(`${config.url}?${params}`);
+
+      const request = new Request(url.href, {
+        method: config.method ? config.method.toUpperCase() : "GET",
+        body: config.data,
+        redirect: "manual",
+        headers: (config.headers as any) || undefined,
+      });
+
+      const response = await fetch(request, {
+        next: { tags: [config.params["content_type"]], revalidate: false },
+      });
+      const data = await response.json();
+
+      return {
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers: response.headers,
+        config: config,
+        request: request,
+      } as any;
+    },
   });
 
   const entries = await client.getEntries({
