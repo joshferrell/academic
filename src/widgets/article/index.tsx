@@ -37,7 +37,7 @@ export const Article = ({
     width="full"
   >
     {image && (
-      <Link href={href}>
+      <Link href={href} tabIndex={-1}>
         <Box
           height={size === "medium" ? ["sm", "md"] : ["md", "lg"]}
           borderRadius="md"
