@@ -485,7 +485,7 @@ const formatCollaborator = (
 
 const formatCollaboratorList = (x: any): Collaborator[] => {
   if (!x || !x.length) return [];
-  if (!x[0].fields.name) return [];
+  if (!x[0] || !x[0].fields) return [];
   return x.map(formatCollaborator);
 };
 
