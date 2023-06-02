@@ -63,7 +63,7 @@ const NavBar = ({ project }: PropTypes) => {
   const navItems = [
     {
       title: "Projects",
-      description: "Academic research that is continously worked on",
+      description: "Research and other scholarship",
       href: "/projects",
     },
     {
@@ -73,12 +73,12 @@ const NavBar = ({ project }: PropTypes) => {
     },
     {
       title: "Publications",
-      description: "Journal articles, book chapters, and more",
+      description: "Journal articles and more",
       href: "/publications",
     },
     {
       title: "Grants & Awards",
-      description: "Grants awarded for research continuation",
+      description: "Grants, fellowships, and awards",
       href: "/grants",
     },
   ];

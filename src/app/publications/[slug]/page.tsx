@@ -36,8 +36,31 @@ export const generateMetadata = async ({
   const publication = await fetchPublication(slug);
   if (!publication) return {};
 
+  const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
+    publication.title
+  )}&subtitle=${encodeURIComponent(
+    publication.tags.length ? publication.tags[0].title : ""
+  )}`;
+
+  const url = `${process.env.HOST_NAME}/publications/${slug}`;
+
   return {
     title: `${process.env.STUDENT_NAME} | ${publication.title}`,
+    twitter: {
+      card: "summary_large_image",
+      title: publication.title,
+      images: {
+        url: ogImage,
+        alt: "",
+      },
+    },
+    openGraph: {
+      title: publication.title,
+      type: "article",
+      url,
+      locale: "en-US",
+      images: [{ url: ogImage, alt: "", width: 1200, height: 630 }],
+    },
   };
 };
 

@@ -24,7 +24,7 @@ const OpenGraphImage = ({ title, subtitle, url, name }: PropTypes) => (
       alignItems: "flex-start",
       justifyContent: "center",
       color: imageColors.white,
-      fontSize: 64,
+      fontSize: 45,
       fontWeight: 600,
       paddingLeft: "240px",
       backgroundColor: imageColors.background,
@@ -116,7 +116,7 @@ const OpenGraphImage = ({ title, subtitle, url, name }: PropTypes) => (
         display: "flex",
         alignItems: "flex-start",
         flexDirection: "column",
-        fontSize: 40,
+        fontSize: 32,
         fontFamily: '"Manrope-bold"',
         fontWeight: 700,
         paddingTop: "20px",
@@ -125,7 +125,7 @@ const OpenGraphImage = ({ title, subtitle, url, name }: PropTypes) => (
       <div>{name}</div>
       <div
         style={{
-          fontSize: 30,
+          fontSize: 24,
           color: imageColors.tertiary,
         }}
       >
