@@ -61,7 +61,7 @@ export const Gradient = recipe({
       },
       large: {
         background:
-          "linear-gradient(to top, rgb(17, 24, 39), rgba(17, 24, 39, 0.4), rgba(17, 24, 39, 0))",
+          "linear-gradient(to top, rgb(17, 24, 39), rgba(17, 24, 39, 0.5), rgba(17, 24, 39, .3))",
       },
     },
   },

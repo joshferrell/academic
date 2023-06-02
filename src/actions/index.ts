@@ -481,6 +481,7 @@ export const fetchProjectList = async (
 ): Promise<Project[]> => {
   const entries = await fetchEntries("project", {
     featuredOnly,
+    orderBy: "-fields.projectStartDate",
     filter: {
       "fields.promote": false,
     },
@@ -490,6 +491,7 @@ export const fetchProjectList = async (
       "fields.summary",
       "fields.tags",
       "fields.featuredImage",
+      "fields.projectStartDate",
     ],
   });
 
