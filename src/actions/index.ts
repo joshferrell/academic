@@ -185,7 +185,8 @@ const fetchEntries = async (
       });
 
       const response = await fetch(request, {
-        next: { tags: [config.params["content_type"]], revalidate: false },
+        // TODO: add back cache after you figure out invalidation
+        // next: { tags: [config.params["content_type"]], revalidate: false },
       });
       const data = await response.json();
 
