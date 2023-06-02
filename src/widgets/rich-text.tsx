@@ -57,7 +57,7 @@ const options = {
         >
           <Image
             src={`https:${fields.file.url}`}
-            alt={fields.title}
+            alt={fields.file.title}
             fill={true}
             style={{ objectFit: "cover" }}
           />

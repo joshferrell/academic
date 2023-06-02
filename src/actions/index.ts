@@ -373,7 +373,7 @@ const formatProject = (
     img: entry.fields.featuredImage
       ? {
           src: `https:${(entry.fields.featuredImage as any).fields.file.url}`,
-          alt: (entry.fields.featuredImage as any).fields.description,
+          alt: (entry.fields.featuredImage as any).fields.title,
         }
       : undefined,
   } as Project);
