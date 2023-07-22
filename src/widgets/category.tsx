@@ -39,7 +39,10 @@ const Category = ({
         as={level === "primary" ? "h2" : "h3"}
         margin={0}
         headingStyle={level === "primary" ? "title" : "subtitle"}
-        style={{ lineHeight: size === "small" ? "1.875rem" : undefined }}
+        style={{
+          lineHeight: size === "small" ? "1.875rem" : undefined,
+          textTransform: "capitalize",
+        }}
       >
         {title}
       </Box>
