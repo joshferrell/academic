@@ -6,228 +6,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
-          }
-        },
-        "id": "student",
-        "type": "ContentType",
-        "createdAt": "2023-04-12T19:55:36.900Z",
-        "updatedAt": "2023-05-07T04:55:56.317Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 15,
-        "publishedAt": "2023-05-07T04:55:56.317Z",
-        "firstPublishedAt": "2023-04-12T19:55:37.399Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "publishedCounter": 8,
-        "version": 16,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        }
-      },
-      "displayField": "name",
-      "name": "Student",
-      "description": "The student bio, name, contact links, etc.",
-      "fields": [
-        {
-          "id": "name",
-          "name": "Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "role",
-          "name": "Role",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "email",
-          "name": "Email",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "regexp": {
-                "pattern": "^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$",
-                "flags": null
-              },
-              "message": "Email must be of type email"
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "profilePhoto",
-          "name": "Profile Photo",
-          "type": "Link",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "linkMimetypeGroup": [
-                "image"
-              ]
-            },
-            {
-              "assetImageDimensions": {
-                "width": {
-                  "min": 500,
-                  "max": null
-                },
-                "height": {
-                  "min": 500,
-                  "max": null
-                }
-              },
-              "message": "Dimensions must be at least 500 x 500 px"
-            },
-            {
-              "assetFileSize": {
-                "min": null,
-                "max": 5242880
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Asset"
-        },
-        {
-          "id": "social",
-          "name": "Social",
-          "type": "Object",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "bio",
-          "name": "Bio",
-          "type": "RichText",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
-              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
-            },
-            {
-              "enabledNodeTypes": [
-                "heading-3",
-                "heading-4",
-                "heading-5",
-                "heading-6",
-                "ordered-list",
-                "unordered-list",
-                "hr",
-                "blockquote",
-                "embedded-entry-block",
-                "table",
-                "hyperlink",
-                "entry-hyperlink",
-                "asset-hyperlink",
-                "embedded-entry-inline",
-                "heading-2"
-              ],
-              "message": "Only heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, table, link to Url, link to entry, link to asset, inline entry, and heading 2 nodes are allowed"
-            },
-            {
-              "nodes": {
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "cv",
-          "name": "CV",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkMimetypeGroup": [
-                "pdfdocument"
-              ],
-              "message": "CV Must be a PDF Format"
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Asset"
-        },
-        {
-          "id": "briefBio",
-          "name": "Brief Bio",
-          "type": "Text",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
+            "id": "39gj7q5bbdj9"
           }
         },
         "id": "project",
         "type": "ContentType",
-        "createdAt": "2023-05-02T00:08:43.877Z",
-        "updatedAt": "2023-05-09T22:42:21.017Z",
+        "createdAt": "2023-07-24T05:53:40.858Z",
+        "updatedAt": "2023-07-24T05:53:42.607Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -235,9 +20,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 25,
-        "publishedAt": "2023-05-09T22:42:21.017Z",
-        "firstPublishedAt": "2023-05-02T00:08:44.481Z",
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:42.607Z",
+        "firstPublishedAt": "2023-07-24T05:53:42.607Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -252,8 +37,8 @@
             "id": "1XrWSBnXbdQLlIL8SM5YVd"
           }
         },
-        "publishedCounter": 13,
-        "version": 26,
+        "publishedCounter": 1,
+        "version": 2,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -412,120 +197,10 @@
           },
           "disabled": false,
           "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
-          }
-        },
-        "id": "collaborator",
-        "type": "ContentType",
-        "createdAt": "2023-05-02T00:11:43.596Z",
-        "updatedAt": "2023-05-08T22:48:07.326Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 7,
-        "publishedAt": "2023-05-08T22:48:07.326Z",
-        "firstPublishedAt": "2023-05-02T00:11:44.180Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "publishedCounter": 4,
-        "version": 8,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        }
-      },
-      "displayField": "name",
-      "name": "Collaborator",
-      "description": "Project collaborators",
-      "fields": [
-        {
-          "id": "name",
-          "name": "Name",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
         },
         {
-          "id": "profileLink",
-          "name": "Profile Link",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "regexp": {
-                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
-                "flags": null
-              },
-              "message": "Profile link must be a url to an external website"
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "description",
-          "name": "Description",
-          "type": "Text",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "size": {
-                "max": 500
-              },
-              "message": "Descriptions should be short and less than 500 characters"
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "institution",
-          "name": "Institution",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "activeProjects",
-          "name": "activeProjects",
+          "id": "activeAssistants",
+          "name": "Active Assistants",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -538,7 +213,7 @@
             "validations": [
               {
                 "linkContentType": [
-                  "project"
+                  "collaborator"
                 ]
               }
             ],
@@ -546,8 +221,8 @@
           }
         },
         {
-          "id": "inactiveProjects",
-          "name": "inactiveProjects",
+          "id": "pastAssitants",
+          "name": "Past Assistants",
           "type": "Array",
           "localized": false,
           "required": false,
@@ -560,7 +235,29 @@
             "validations": [
               {
                 "linkContentType": [
-                  "project"
+                  "collaborator"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "primaryCollaborators",
+          "name": "Primary Collaborators",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "collaborator"
                 ]
               }
             ],
@@ -575,13 +272,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
+            "id": "39gj7q5bbdj9"
           }
         },
-        "id": "tags",
+        "id": "publication",
         "type": "ContentType",
-        "createdAt": "2023-05-02T00:17:33.518Z",
-        "updatedAt": "2023-05-02T00:17:34.093Z",
+        "createdAt": "2023-07-24T05:53:40.874Z",
+        "updatedAt": "2023-07-24T05:53:42.111Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -590,8 +287,8 @@
           }
         },
         "publishedVersion": 1,
-        "publishedAt": "2023-05-02T00:17:34.093Z",
-        "firstPublishedAt": "2023-05-02T00:17:34.093Z",
+        "publishedAt": "2023-07-24T05:53:42.111Z",
+        "firstPublishedAt": "2023-07-24T05:53:42.111Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -608,209 +305,6 @@
         },
         "publishedCounter": 1,
         "version": 2,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        }
-      },
-      "displayField": "title",
-      "name": "Tags",
-      "description": "Tags for linking projects and useful for SEO results",
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-            {
-              "unique": true
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "description",
-          "name": "Description",
-          "type": "Text",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "size": {
-                "max": 500
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
-          }
-        },
-        "id": "grants-and-awards",
-        "type": "ContentType",
-        "createdAt": "2023-05-02T20:03:14.327Z",
-        "updatedAt": "2023-05-06T23:15:32.879Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 15,
-        "publishedAt": "2023-05-06T23:15:32.879Z",
-        "firstPublishedAt": "2023-05-02T20:03:14.881Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "publishedCounter": 8,
-        "version": 16,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        }
-      },
-      "displayField": "title",
-      "name": "Grants and Awards",
-      "description": "",
-      "fields": [
-        {
-          "id": "title",
-          "name": "Title",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "descriptionGrantedBy",
-          "name": "Description",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "awardLink",
-          "name": "Award Link",
-          "type": "Symbol",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "regexp": {
-                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
-                "flags": null
-              }
-            }
-          ],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "project",
-          "name": "Project",
-          "type": "Link",
-          "localized": false,
-          "required": false,
-          "validations": [
-            {
-              "linkContentType": [
-                "project"
-              ]
-            }
-          ],
-          "disabled": false,
-          "omitted": false,
-          "linkType": "Entry"
-        },
-        {
-          "id": "year",
-          "name": "Year Awarded",
-          "type": "Date",
-          "localized": false,
-          "required": true,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false
-        }
-      ]
-    },
-    {
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
-          }
-        },
-        "id": "publication",
-        "type": "ContentType",
-        "createdAt": "2023-05-02T22:24:23.459Z",
-        "updatedAt": "2023-05-09T02:11:12.455Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 19,
-        "publishedAt": "2023-05-09T02:11:12.455Z",
-        "firstPublishedAt": "2023-05-02T22:24:23.852Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "1XrWSBnXbdQLlIL8SM5YVd"
-          }
-        },
-        "publishedCounter": 10,
-        "version": 20,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -987,11 +481,11 @@
               "in": [
                 "Manuscript",
                 "Other publications",
-                "Journal article",
                 "Conference paper",
                 "Report",
                 "Book",
-                "Book section"
+                "Book section",
+                "Journal articles"
               ]
             }
           ],
@@ -1045,13 +539,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
+            "id": "39gj7q5bbdj9"
           }
         },
-        "id": "event",
+        "id": "collaborator",
         "type": "ContentType",
-        "createdAt": "2023-05-03T06:16:31.594Z",
-        "updatedAt": "2023-05-08T23:46:14.373Z",
+        "createdAt": "2023-07-24T05:53:40.875Z",
+        "updatedAt": "2023-07-24T05:53:44.402Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1059,9 +553,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-05-08T23:46:14.373Z",
-        "firstPublishedAt": "2023-05-03T06:16:31.891Z",
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:44.402Z",
+        "firstPublishedAt": "2023-07-24T05:53:44.402Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1076,8 +570,795 @@
             "id": "1XrWSBnXbdQLlIL8SM5YVd"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Collaborator",
+      "description": "Project collaborators",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "profileLink",
+          "name": "Profile Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              },
+              "message": "Profile link must be a url to an external website"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 500
+              },
+              "message": "Descriptions should be short and less than 500 characters"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "institution",
+          "name": "Institution",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "profilePhoto",
+          "name": "Profile Photo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "grants-and-awards",
+        "type": "ContentType",
+        "createdAt": "2023-07-24T05:53:40.881Z",
+        "updatedAt": "2023-07-24T05:53:43.071Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:43.071Z",
+        "firstPublishedAt": "2023-07-24T05:53:43.071Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Grants and Awards",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "descriptionGrantedBy",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "awardLink",
+          "name": "Award Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(ftp|http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "project",
+          "name": "Project",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "project"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "year",
+          "name": "Year Awarded",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "tags",
+        "type": "ContentType",
+        "createdAt": "2023-07-24T05:53:40.881Z",
+        "updatedAt": "2023-07-24T05:53:43.990Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:43.990Z",
+        "firstPublishedAt": "2023-07-24T05:53:43.990Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Tags",
+      "description": "Tags for linking projects and useful for SEO results",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 500
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "student",
+        "type": "ContentType",
+        "createdAt": "2023-07-24T05:53:40.886Z",
+        "updatedAt": "2023-07-24T05:53:43.549Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:43.549Z",
+        "firstPublishedAt": "2023-07-24T05:53:43.549Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Student",
+      "description": "The student bio, name, contact links, etc.",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "role",
+          "name": "Role",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "email",
+          "name": "Email",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^\\w[\\w.-]*@([\\w-]+\\.)+[\\w-]+$",
+                "flags": null
+              },
+              "message": "Email must be of type email"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "profilePhoto",
+          "name": "Profile Photo",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            },
+            {
+              "assetImageDimensions": {
+                "width": {
+                  "min": 500,
+                  "max": null
+                },
+                "height": {
+                  "min": 500,
+                  "max": null
+                }
+              },
+              "message": "Dimensions must be at least 500 x 500 px"
+            },
+            {
+              "assetFileSize": {
+                "min": null,
+                "max": 5242880
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "social",
+          "name": "Social",
+          "type": "Object",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "bio",
+          "name": "Bio",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-2"
+              ],
+              "message": "Only heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, table, link to Url, link to entry, link to asset, inline entry, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cv",
+          "name": "CV",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "pdfdocument"
+              ],
+              "message": "CV Must be a PDF Format"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "briefBio",
+          "name": "Brief Bio",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "summary",
+          "name": "Summary",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "max": 250
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "interests",
+          "name": "Interests",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "education",
+          "name": "Education",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "education"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2023-07-24T05:53:41.665Z",
+        "updatedAt": "2023-07-24T05:53:46.655Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:46.655Z",
+        "firstPublishedAt": "2023-07-24T05:53:46.655Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Post",
+      "description": "A blog post or article with general thoughts. Useful for posting about non-published work or just being able to market your thoughts.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "max": 500
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featuredImage",
+          "name": "Featured Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "postContent",
+          "name": "Post Content",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline"
+              ],
+              "message": "Only heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "tags"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "relatedProjects",
+          "name": "Related Projects",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "project"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "event",
+        "type": "ContentType",
+        "createdAt": "2023-07-24T05:53:41.677Z",
+        "updatedAt": "2023-07-24T05:53:44.827Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:44.827Z",
+        "firstPublishedAt": "2023-07-24T05:53:44.827Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1100,6 +1381,22 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "presenters",
+          "name": "Presenters",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
         },
         {
           "id": "summary",
@@ -1262,6 +1559,17 @@
           ],
           "disabled": false,
           "omitted": false
+        },
+        {
+          "id": "location",
+          "name": "Location",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
         }
       ]
     },
@@ -1271,13 +1579,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
+            "id": "39gj7q5bbdj9"
           }
         },
-        "id": "focusContent",
+        "id": "teaching",
         "type": "ContentType",
-        "createdAt": "2023-05-07T03:58:15.854Z",
-        "updatedAt": "2023-05-07T04:55:40.114Z",
+        "createdAt": "2023-07-24T05:53:41.685Z",
+        "updatedAt": "2023-07-24T05:53:45.773Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1285,9 +1593,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 5,
-        "publishedAt": "2023-05-07T04:55:40.114Z",
-        "firstPublishedAt": "2023-05-07T03:58:16.184Z",
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:45.773Z",
+        "firstPublishedAt": "2023-07-24T05:53:45.773Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1302,8 +1610,144 @@
             "id": "1XrWSBnXbdQLlIL8SM5YVd"
           }
         },
-        "publishedCounter": 3,
-        "version": 6,
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Teaching Overview",
+      "description": "A brief overview about your teaching experience. This should be a single post about your teaching methods or what classes you have taught.",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": "Teaching Experience"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "hyperlink",
+                "entry-hyperlink",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "heading-2"
+              ],
+              "message": "Only heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, and heading 2 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "mentorship",
+          "name": "Mentorship",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "collaborator"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "focusContent",
+        "type": "ContentType",
+        "createdAt": "2023-07-24T05:53:41.691Z",
+        "updatedAt": "2023-07-24T05:53:45.285Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:45.285Z",
+        "firstPublishedAt": "2023-07-24T05:53:45.285Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1406,13 +1850,13 @@
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
+            "id": "39gj7q5bbdj9"
           }
         },
-        "id": "teaching",
+        "id": "education",
         "type": "ContentType",
-        "createdAt": "2023-05-07T04:42:51.629Z",
-        "updatedAt": "2023-05-08T22:49:16.050Z",
+        "createdAt": "2023-07-24T05:53:41.695Z",
+        "updatedAt": "2023-07-24T05:53:46.211Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1420,9 +1864,9 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2023-05-08T22:49:16.050Z",
-        "firstPublishedAt": "2023-05-07T04:42:51.913Z",
+        "publishedVersion": 1,
+        "publishedAt": "2023-07-24T05:53:46.211Z",
+        "firstPublishedAt": "2023-07-24T05:53:46.211Z",
         "createdBy": {
           "sys": {
             "type": "Link",
@@ -1437,8 +1881,8 @@
             "id": "1XrWSBnXbdQLlIL8SM5YVd"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 1,
+        "version": 2,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1448,91 +1892,30 @@
         }
       },
       "displayField": "title",
-      "name": "Teaching",
-      "description": "",
+      "name": "Education",
+      "description": "List your academic experience (e.g. masters, phd, etc.)",
       "fields": [
         {
           "id": "title",
-          "name": "title",
+          "name": "Title",
           "type": "Symbol",
           "localized": false,
           "required": true,
           "validations": [
           ],
-          "defaultValue": {
-            "en-US": "Teaching Experience"
-          },
           "disabled": false,
           "omitted": false
         },
         {
-          "id": "content",
-          "name": "Content",
-          "type": "RichText",
+          "id": "university",
+          "name": "University",
+          "type": "Symbol",
           "localized": false,
           "required": true,
           "validations": [
-            {
-              "enabledMarks": [
-                "bold",
-                "italic",
-                "underline",
-                "code",
-                "superscript",
-                "subscript"
-              ],
-              "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
-            },
-            {
-              "enabledNodeTypes": [
-                "heading-3",
-                "heading-4",
-                "heading-5",
-                "heading-6",
-                "ordered-list",
-                "unordered-list",
-                "hr",
-                "blockquote",
-                "embedded-entry-block",
-                "embedded-asset-block",
-                "table",
-                "hyperlink",
-                "entry-hyperlink",
-                "asset-hyperlink",
-                "embedded-entry-inline",
-                "heading-2"
-              ],
-              "message": "Only heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, and heading 2 nodes are allowed"
-            },
-            {
-              "nodes": {
-              }
-            }
           ],
           "disabled": false,
           "omitted": false
-        },
-        {
-          "id": "mentorship",
-          "name": "Mentorship",
-          "type": "Array",
-          "localized": false,
-          "required": false,
-          "validations": [
-          ],
-          "disabled": false,
-          "omitted": false,
-          "items": {
-            "type": "Link",
-            "validations": [
-              {
-                "linkContentType": [
-                  "collaborator"
-                ]
-              }
-            ],
-            "linkType": "Entry"
-          }
         }
       ]
     }
@@ -1546,13 +1929,13 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "x3kwjvrmcw7n",
+            "id": "39gj7q5bbdj9",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 16,
-        "createdAt": "2023-04-12T19:55:37.564Z",
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:42.831Z",
         "createdBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -1560,102 +1943,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-07T04:55:57.121Z",
-        "updatedBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "student",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "role",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "email",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "profilePhoto",
-          "widgetId": "assetLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "social",
-          "settings": {
-            "helpText": "[ { icon: 'name', link: 'http://twitter.com', title: 'Twitter' } ]"
-          },
-          "widgetId": "objectEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "bio",
-          "settings": {
-            "helpText": "Write a short bio for your website"
-          },
-          "widgetId": "richTextEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "cv",
-          "widgetId": "assetLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "briefBio",
-          "settings": {
-            "helpText": "Very brief bio (e.g. Sociologist probing food system inequalities)"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "x3kwjvrmcw7n",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 26,
-        "createdAt": "2023-05-02T00:08:44.664Z",
-        "createdBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-05-09T22:42:22.722Z",
+        "updatedAt": "2023-07-24T05:53:48.689Z",
         "updatedBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -1743,86 +2031,29 @@
           },
           "widgetId": "boolean",
           "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "x3kwjvrmcw7n",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 8,
-        "createdAt": "2023-05-02T00:11:44.361Z",
-        "createdBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-05-08T22:48:08.059Z",
-        "updatedBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "collaborator",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "name",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "profileLink",
-          "widgetId": "urlEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "description",
+          "fieldId": "activeAssistants",
           "settings": {
-            "helpText": "Brief description about the collaborator"
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
           },
-          "widgetId": "markdown",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "institution",
-          "settings": {
-            "helpText": "University of Example, California"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "activeProjects",
           "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "inactiveProjects",
+          "fieldId": "pastAssitants",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "primaryCollaborators",
           "widgetId": "entryLinksEditor",
           "widgetNamespace": "builtin"
         }
@@ -1834,13 +2065,13 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "x3kwjvrmcw7n",
+            "id": "39gj7q5bbdj9",
             "type": "Link",
             "linkType": "Space"
           }
         },
         "version": 2,
-        "createdAt": "2023-05-02T00:17:34.193Z",
+        "createdAt": "2023-07-24T05:53:42.325Z",
         "createdBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -1848,151 +2079,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-02T00:17:34.925Z",
-        "updatedBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "tags",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "description",
-          "settings": {
-            "helpText": "Brief description describing the tag"
-          },
-          "widgetId": "multipleLine",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "x3kwjvrmcw7n",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 16,
-        "createdAt": "2023-05-02T20:03:15.027Z",
-        "createdBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-05-06T23:15:33.596Z",
-        "updatedBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "contentType": {
-          "sys": {
-            "id": "grants-and-awards",
-            "type": "Link",
-            "linkType": "ContentType"
-          }
-        },
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        }
-      },
-      "controls": [
-        {
-          "fieldId": "title",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "descriptionGrantedBy",
-          "settings": {
-            "helpText": "$100 from University of Example"
-          },
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "awardLink",
-          "settings": {
-            "helpText": "Link to program, award, or announcement"
-          },
-          "widgetId": "urlEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "project",
-          "settings": {
-            "showLinkEntityAction": true,
-            "showCreateEntityAction": false
-          },
-          "widgetId": "entryLinkEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "year",
-          "settings": {
-            "ampm": "24",
-            "format": "dateonly"
-          },
-          "widgetId": "datePicker",
-          "widgetNamespace": "builtin"
-        }
-      ]
-    },
-    {
-      "sys": {
-        "id": "default",
-        "type": "EditorInterface",
-        "space": {
-          "sys": {
-            "id": "x3kwjvrmcw7n",
-            "type": "Link",
-            "linkType": "Space"
-          }
-        },
-        "version": 20,
-        "createdAt": "2023-05-02T22:24:23.999Z",
-        "createdBy": {
-          "sys": {
-            "id": "1XrWSBnXbdQLlIL8SM5YVd",
-            "type": "Link",
-            "linkType": "User"
-          }
-        },
-        "updatedAt": "2023-05-09T02:11:13.386Z",
+        "updatedAt": "2023-07-24T05:53:48.618Z",
         "updatedBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2100,13 +2187,13 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "x3kwjvrmcw7n",
+            "id": "39gj7q5bbdj9",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 6,
-        "createdAt": "2023-05-03T06:16:32.089Z",
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:44.587Z",
         "createdBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2114,7 +2201,432 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-08T23:46:15.159Z",
+        "updatedAt": "2023-07-24T05:53:48.627Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "collaborator",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "profileLink",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "settings": {
+            "helpText": "Brief description about the collaborator"
+          },
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "institution",
+          "settings": {
+            "helpText": "University of Example, California"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "profilePhoto",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "39gj7q5bbdj9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:43.275Z",
+        "createdBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-24T05:53:48.638Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "grants-and-awards",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "descriptionGrantedBy",
+          "settings": {
+            "helpText": "$100 from University of Example"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "awardLink",
+          "settings": {
+            "helpText": "Link to program, award, or announcement"
+          },
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "project",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": false
+          },
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "year",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "39gj7q5bbdj9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:44.136Z",
+        "createdBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-24T05:53:47.612Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "tags",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "settings": {
+            "helpText": "Brief description describing the tag"
+          },
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "39gj7q5bbdj9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:43.753Z",
+        "createdBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-24T05:53:48.628Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "student",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "role",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "email",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "profilePhoto",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "social",
+          "settings": {
+            "helpText": "[ {  \"icon\": \"Mail\",  \"link\": \"mailto:jdoe@example.com\", \"description\": \"jdoe@example.com\", \"title\": \"Email\"  }]"
+          },
+          "widgetId": "objectEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "bio",
+          "settings": {
+            "helpText": "Write a short bio for your website"
+          },
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cv",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "briefBio",
+          "settings": {
+            "helpText": "Very brief bio (e.g. Sociologist probing food system inequalities)"
+          },
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "summary",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "interests",
+          "settings": {
+            "helpText": "(e.g. Food Systems, Nonprofit Organizations)"
+          },
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "education",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "39gj7q5bbdj9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:46.821Z",
+        "createdBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-24T05:53:48.641Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "multipleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featuredImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "postContent",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tags",
+          "settings": {
+            "bulkEditing": true,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "relatedProjects",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": false
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "39gj7q5bbdj9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:45.040Z",
+        "createdBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-24T05:53:48.681Z",
         "updatedBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2141,6 +2653,11 @@
         {
           "fieldId": "title",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "presenters",
+          "widgetId": "tagEditor",
           "widgetNamespace": "builtin"
         },
         {
@@ -2197,6 +2714,11 @@
           "fieldId": "recording",
           "widgetId": "urlEditor",
           "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "location",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
         }
       ]
     },
@@ -2206,13 +2728,13 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "x3kwjvrmcw7n",
+            "id": "39gj7q5bbdj9",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 6,
-        "createdAt": "2023-05-07T03:58:16.364Z",
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:45.951Z",
         "createdBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2220,7 +2742,68 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-07T04:55:40.829Z",
+        "updatedAt": "2023-07-24T05:53:49.570Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "teaching",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "mentorship",
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "39gj7q5bbdj9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:45.471Z",
+        "createdBy": {
+          "sys": {
+            "id": "1XrWSBnXbdQLlIL8SM5YVd",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-07-24T05:53:49.573Z",
         "updatedBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2281,13 +2864,13 @@
         "type": "EditorInterface",
         "space": {
           "sys": {
-            "id": "x3kwjvrmcw7n",
+            "id": "39gj7q5bbdj9",
             "type": "Link",
             "linkType": "Space"
           }
         },
-        "version": 4,
-        "createdAt": "2023-05-07T04:42:52.236Z",
+        "version": 2,
+        "createdAt": "2023-07-24T05:53:46.378Z",
         "createdBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2295,7 +2878,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-08T22:49:16.990Z",
+        "updatedAt": "2023-07-24T05:53:49.582Z",
         "updatedBy": {
           "sys": {
             "id": "1XrWSBnXbdQLlIL8SM5YVd",
@@ -2305,7 +2888,7 @@
         },
         "contentType": {
           "sys": {
-            "id": "teaching",
+            "id": "education",
             "type": "Link",
             "linkType": "ContentType"
           }
@@ -2321,20 +2904,1968 @@
       "controls": [
         {
           "fieldId": "title",
+          "settings": {
+            "helpText": "(e.g. Ph.D. Student in Math)"
+          },
           "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "content",
-          "widgetId": "richTextEditor",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "mentorship",
-          "widgetId": "entryCardsEditor",
+          "fieldId": "university",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "3YMqhrwGyIptTGfetLMEMk",
+        "type": "Entry",
+        "createdAt": "2023-07-24T05:53:58.774Z",
+        "updatedAt": "2023-07-24T06:29:45.668Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 28,
+        "publishedAt": "2023-07-24T06:29:45.668Z",
+        "firstPublishedAt": "2023-07-24T05:58:59.266Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 29,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "student"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Jane Doe"
+        },
+        "email": {
+          "en-US": "jane_doe@example.com"
+        },
+        "profilePhoto": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "47D9q3Gu5KJWaCE2O2eilj"
+            }
+          }
+        },
+        "social": {
+          "en-US": [
+            {
+              "icon": "Mail",
+              "link": "mailto:jdoe@example.com",
+              "title": "Email",
+              "description": "jdoe@example.com"
+            },
+            {
+              "icon": "Linkedin",
+              "link": "https://www.linkedin.com/",
+              "title": "Linkedin",
+              "description": "Follow on LinkedIn"
+            },
+            {
+              "icon": "Link",
+              "link": "https://example.com",
+              "title": "University profile",
+              "description": "University Profile"
+            }
+          ]
+        },
+        "bio": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "An exceptionally dedicated and driven PhD candidate in Computer Science with a focus on Artificial Intelligence at Stanford University, Jane Doe is eagerly seeking opportunities to apply her research skills and deep knowledge within a practical environment. She possesses a comprehensive understanding of complex machine learning algorithms and is committed to exploring innovative solutions to drive technological advancement.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "After earning her Bachelor's and Master's degrees in Computer Science from MIT, Jane chose to further her academic journey, demonstrating a resilient dedication to her field. Her doctoral research delves into the potential of artificial neural networks in enhancing predictive modeling, a topic she has published extensively on in various renowned journals.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Jane has developed and honed a set of versatile skills including data analysis, computational modeling, and algorithm development, which have all been complemented by her proficiency in Python, Java, and R. Her internship experience at tech giants like Microsoft and Google has given her a strong footing in industry dynamics and the professional application of her skills. Her work has been recognized for its unique insight, with Jane receiving the prestigious ABC Technology Innovation Award in 2022.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "A dynamic team player, Jane has also demonstrated strong leadership skills as the president of Stanford's Women in Computer Science society, where she focused on promoting diversity and inclusivity in the technology sector.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Jane Doe's scientific curiosity, allied with her resilient passion for AI research, drives her ambition to work in an environment where innovation and continuous learning thrive. With her deep academic insights and industry experience, Jane is eager to bring her unique perspective and comprehensive skills to a progressive tech firm, making strides in the field of artificial intelligence.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "She is not only ready to make the next leap in her career but is also excited to contribute to a team that values innovation, collaboration, and has a strong commitment to breaking new ground in the technology sector.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "briefBio": {
+          "en-US": "With a focus on Artificial Intelligence at Stanford University, Jane Doe is eagerly seeking opportunities to apply her research skills and deep knowledge within a practical environment. She possesses a comprehensive understanding of complex machine learning algorithms and is committed to exploring innovative solutions to drive technological advancement."
+        },
+        "summary": {
+          "en-US": "An exceptionally dedicated and driven PhD candidate in Computer Science"
+        },
+        "interests": {
+          "en-US": [
+            "Computer Science",
+            "Artificial Intelligence"
+          ]
+        },
+        "education": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "HvjBc2LXAdBjNIFP8UInQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2F9wavbhSzXvfQrWC9ZgVj"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "HvjBc2LXAdBjNIFP8UInQ",
+        "type": "Entry",
+        "createdAt": "2023-07-24T05:58:35.730Z",
+        "updatedAt": "2023-07-24T06:03:38.116Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2023-07-24T06:03:38.116Z",
+        "firstPublishedAt": "2023-07-24T05:58:55.376Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "education"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Bachelors in Science, 2019"
+        },
+        "university": {
+          "en-US": "Awesome University"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "3CGjwBnrxOxKfrSie0nCaf",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:00:57.689Z",
+        "updatedAt": "2023-07-24T06:02:20.108Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-07-24T06:02:20.108Z",
+        "firstPublishedAt": "2023-07-24T06:02:20.108Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "teaching"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Teaching Experience"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "As a natural educator, Jane Doe has cultivated her teaching skills throughout her academic journey. With a strong belief in the power of knowledge sharing and mentorship, she has served as a Teaching Assistant and Instructor in various Computer Science courses, enriching her pedagogical approach while refining her expertise in the subject.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Teaching Assistant Experience:",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "ordered-list",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Introduction to Computer Science (2019 - 2020):",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " Jane served as a Teaching Assistant in this foundational course, where she was instrumental in supporting students in grasping fundamental programming concepts, computational problem-solving strategies, and basics of computer systems.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Data Structures and Algorithms (2020 - 2021):",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " Jane helped to assist in this more advanced course, where she facilitated lab sessions, graded assignments and exams, and provided one-on-one tutoring to students struggling with the intricacies of algorithms and data organization.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "nodeType": "list-item",
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "nodeType": "paragraph",
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "nodeType": "text",
+                            "value": "Artificial Intelligence: Principles and Techniques (2021 - 2022):",
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "data": {
+                            }
+                          },
+                          {
+                            "nodeType": "text",
+                            "value": " As a TA in this advanced course, Jane was able to directly apply her research area, assisting in curriculum development, leading discussion sections, and mentoring students on their final projects.",
+                            "marks": [
+                            ],
+                            "data": {
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Teaching Experience:",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Machine Learning Fundamentals (2022 - 2023):",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "data": {
+                    }
+                  },
+                  {
+                    "nodeType": "text",
+                    "value": " Jane had the opportunity to lead her own course, which provided a comprehensive overview of machine learning principles and applications. Her responsibilities included creating the syllabus, preparing and delivering lectures, and assessing student performance. Under her guidance, students became well-versed in a range of machine learning techniques, from regression models to neural networks. Jane's teaching was commended for its clarity, real-world applicability, and her dedication to student engagement.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Jane's teaching experiences have provided her with a deep appreciation of the learning process and have allowed her to help shape the next generation of computer scientists. Her strong ability to explain complex concepts in an accessible manner and her commitment to student success make her not only a proficient educator but also a valued mentor.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "2F9wavbhSzXvfQrWC9ZgVj",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:02:42.539Z",
+        "updatedAt": "2023-07-24T06:03:22.638Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-24T06:03:22.638Z",
+        "firstPublishedAt": "2023-07-24T06:03:22.638Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "education"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ph.D Student in Computer Science, 2019-Present"
+        },
+        "university": {
+          "en-US": "University of Example"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "4fPqC5oV82HdfyjaAJ4hnD",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:06:56.359Z",
+        "updatedAt": "2023-07-24T06:09:34.842Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2023-07-24T06:09:34.842Z",
+        "firstPublishedAt": "2023-07-24T06:09:34.842Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "collaborator"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "John Smith"
+        },
+        "profileLink": {
+          "en-US": "http://example.com"
+        },
+        "description": {
+          "en-US": "John Smith is a dedicated undergraduate at Stanford University's Computer Science Department. His adeptness in programming languages like Python, Java, and C++ has been showcased through participation in hackathons and coding competitions. He has demonstrated an enthusiastic interest in artificial intelligence, delving into machine learning concepts in his elective studies."
+        },
+        "institution": {
+          "en-US": "University of Example"
+        },
+        "profilePhoto": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "7mhHbnXv6ZQ9X4N66KLISj"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "1nkdfTSXXoBtHY6BYZe9xH",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:09:46.860Z",
+        "updatedAt": "2023-07-24T06:13:14.369Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2023-07-24T06:13:14.369Z",
+        "firstPublishedAt": "2023-07-24T06:12:47.185Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Enhancing Machine Learning Model Predictability Through Neural Network Optimization"
+        },
+        "projectStartDate": {
+          "en-US": "2023-04-01"
+        },
+        "tags": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "H45bp1pIeGvr2e5fqzElf"
+              }
+            }
+          ]
+        },
+        "summary": {
+          "en-US": "Improving machine learning predictability through neural network optimization, demonstrating significant enhancements in model performance"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "48bCRm681c9pxPtcN9JU4t"
+            }
+          }
+        },
+        "feature": {
+          "en-US": false
+        },
+        "abstract": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This research project proposes an innovative approach to improve the predictability of machine learning models by optimizing artificial neural networks. The study leverages a dataset of over 500,000 records to examine how adjustments to neural network parameters influence model predictability. Initial experiments employed Python for implementing machine learning models, while Keras was used for neural network creation. We conducted rigorous testing using cross-validation methods to ensure the reliability of the models. Our findings demonstrate a significant improvement in model predictability when specific neural network parameters are optimized, potentially offering a new dimension for future machine learning research.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "\n",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "promote": {
+          "en-US": true
+        },
+        "activeAssistants": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4fPqC5oV82HdfyjaAJ4hnD"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "H45bp1pIeGvr2e5fqzElf",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:10:36.511Z",
+        "updatedAt": "2023-07-24T06:10:50.340Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2023-07-24T06:10:50.340Z",
+        "firstPublishedAt": "2023-07-24T06:10:50.340Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "tags"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Machine Learning"
+        },
+        "description": {
+          "en-US": "Isn't machine learning kinda cool?"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "6a7Ta5c6NNQTBHuKP2kmUk",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:14:41.279Z",
+        "updatedAt": "2023-07-24T06:15:09.684Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-24T06:15:09.684Z",
+        "firstPublishedAt": "2023-07-24T06:15:09.684Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "grants-and-awards"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Research block grant"
+        },
+        "descriptionGrantedBy": {
+          "en-US": "$1000 from University of Example"
+        },
+        "project": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "1nkdfTSXXoBtHY6BYZe9xH"
+            }
+          }
+        },
+        "year": {
+          "en-US": "2023-07-23"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "3GiB1ii4DejXPlzpl1nt7i",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:15:20.139Z",
+        "updatedAt": "2023-07-24T06:17:58.851Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2023-07-24T06:17:58.851Z",
+        "firstPublishedAt": "2023-07-24T06:17:58.851Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "publication"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Revolutionizing Predictive Accuracy: Optimizing Neural Networks in Machine Learning Models"
+        },
+        "author": {
+          "en-US": [
+            "Jane Doe"
+          ]
+        },
+        "publication": {
+          "en-US": "Fake Journal of Advanced Computation"
+        },
+        "projects": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1nkdfTSXXoBtHY6BYZe9xH"
+              }
+            }
+          ]
+        },
+        "abstract": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "In the rapidly evolving field of machine learning, the quest for greater model predictability remains a paramount challenge. This article presents a pioneering study conducted by John Smith and Jane Doe, which dives deep into the optimization of artificial neural networks to enhance the predictability of machine learning models. Through an intricate analysis of over half a million records, the research dissects how subtle shifts in neural network parameters can significantly impact the model's predictability. Leveraging Python for machine learning implementation and Keras for the construction of neural networks, the study provides robust testing via cross-validation methods to ensure the models' reliability. The findings shed light on a potential breakthrough in the machine learning domain, as they indicate a substantial improvement in predictability with the strategic optimization of neural network parameters. This research contributes a vital perspective to machine learning literature, paving the way for future investigations and potential applications in this transformative field.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "linkToPublication": {
+          "en-US": "http://example.com"
+        },
+        "tags": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "H45bp1pIeGvr2e5fqzElf"
+              }
+            }
+          ]
+        },
+        "underReview": {
+          "en-US": false
+        },
+        "publicationType": {
+          "en-US": "Journal articles"
+        },
+        "bibtex": {
+          "en-US": "@article{SmithDoe2023,\n  title={Revolutionizing Predictive Accuracy: Optimizing Neural Networks in Machine Learning Models},\n  author={Doe, Jane},\n  journal={Fake Journal of Advanced Computation},\n  volume={35},\n  number={3},\n  pages={295-314},\n  year={2023},\n  publisher={Example Publishing},\n  url={http://www.example.com/content/35/3/295},\n  doi={10.1111/example.12345}\n}"
+        },
+        "feature": {
+          "en-US": true
+        },
+        "date": {
+          "en-US": "2023-04-01"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "7yPnYLFKsSAbJAzSVESZyR",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:18:21.021Z",
+        "updatedAt": "2023-07-24T06:21:42.411Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2023-07-24T06:21:42.411Z",
+        "firstPublishedAt": "2023-07-24T06:21:42.411Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "event"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Transforming Machine Learning: Optimizing Neural Networks for Predictive Accuracy"
+        },
+        "presenters": {
+          "en-US": [
+            "Jane Doe"
+          ]
+        },
+        "summary": {
+          "en-US": "An in-depth presentation on the groundbreaking study that reveals the potential for improving machine learning model predictability through neural network optimization."
+        },
+        "date": {
+          "en-US": "2023-01-14T10:30"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "In this informative session, John Smith and Jane Doe discussed their cutting-edge research, explaining how subtle parameter adjustments within neural networks can significantly improve the predictability of machine learning models. They walked the audience through their comprehensive approach, from the initial experiment setup using Python and Keras to the rigorous cross-validation methods that ensured the reliability of their findings. They also shed light on the broader implications of their research, contributing to an invigorating discussion on the future of machine learning.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "projects": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1nkdfTSXXoBtHY6BYZe9xH"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "H45bp1pIeGvr2e5fqzElf"
+              }
+            }
+          ]
+        },
+        "eventName": {
+          "en-US": "The 8th International Conference of Fake Events"
+        },
+        "eventUrl": {
+          "en-US": "https://example.com"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6DEl3fB0WDG6Z98WEOHXKZ"
+            }
+          }
+        },
+        "location": {
+          "en-US": "San Francisco, USA"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "122NirCx4i4YsdU7SZvfpy",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:21:48.491Z",
+        "updatedAt": "2023-07-24T06:22:57.083Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2023-07-24T06:22:57.083Z",
+        "firstPublishedAt": "2023-07-24T06:22:57.083Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "event"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Neural Network Optimization: A Key to Unlock Enhanced Machine Learning Predictability"
+        },
+        "presenters": {
+          "en-US": [
+            "Jane Doe",
+            "John Smith"
+          ]
+        },
+        "summary": {
+          "en-US": "An engaging presentation highlighting the potential of neural network optimization as a tool to improve machine learning model predictability."
+        },
+        "date": {
+          "en-US": "2023-03-10T12:45"
+        },
+        "description": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "John Smith and Jane Doe captivated the audience with their revolutionary research on neural network optimization in machine learning models. They shared their process of data collection and analysis, emphasizing the role of Python and Keras in their study. They explicated the correlations they identified and explained how these correlations could drive significant advancements in the predictability of machine learning models. The presentation sparked enlightening discussions on how the computational intelligence community can build on this pioneering research.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "projects": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1nkdfTSXXoBtHY6BYZe9xH"
+              }
+            }
+          ]
+        },
+        "tags": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "H45bp1pIeGvr2e5fqzElf"
+              }
+            }
+          ]
+        },
+        "eventName": {
+          "en-US": "The 15th Fake Annual Symposium on Neural Networks and Applications"
+        },
+        "eventUrl": {
+          "en-US": "https://example.com"
+        },
+        "location": {
+          "en-US": "Boston, Massachusetts, USA"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "TFTaIRInm0Brqi5Hdfvhm",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:30:14.933Z",
+        "updatedAt": "2023-07-24T06:32:17.169Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-24T06:32:17.169Z",
+        "firstPublishedAt": "2023-07-24T06:32:17.169Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Deep Learning Techniques for Natural Language Processing"
+        },
+        "projectStartDate": {
+          "en-US": "2019-07-01"
+        },
+        "summary": {
+          "en-US": "Doe explores RNNs and transformers in NLP, demonstrating superior performance of carefully tuned transformer models in key tasks."
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "48bCRm681c9pxPtcN9JU4t"
+            }
+          }
+        },
+        "feature": {
+          "en-US": true
+        },
+        "abstract": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This project delves into the application of deep learning techniques, specifically recurrent neural networks (RNNs) and transformers, in the field of Natural Language Processing (NLP). Jane Doe explores various models, including LSTM, GRU, and BERT, to understand their performance in tasks like sentiment analysis, named entity recognition, and machine translation. Using extensive datasets and rigorous evaluation metrics, she demonstrates that carefully tuned transformer models outperform other techniques for most NLP tasks, providing valuable insights for future NLP applications.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "promote": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "3cK2L2vQaPZrMGCfQ3aTws",
+        "type": "Entry",
+        "createdAt": "2023-07-24T06:32:21.997Z",
+        "updatedAt": "2023-07-24T06:32:45.478Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-24T06:32:45.478Z",
+        "firstPublishedAt": "2023-07-24T06:32:45.478Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "project"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Advanced Cybersecurity: AI for Intrusion Detection Systems"
+        },
+        "projectStartDate": {
+          "en-US": "2023-07-12"
+        },
+        "summary": {
+          "en-US": "Doe employs AI to enhance intrusion detection systems, proving that certain machine learning algorithms can significantly improve cybersecurity"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6DEl3fB0WDG6Z98WEOHXKZ"
+            }
+          }
+        },
+        "feature": {
+          "en-US": true
+        },
+        "abstract": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "In this project, Jane Doe examines the potential of Artificial Intelligence (AI) in improving intrusion detection systems (IDS) for enhanced cybersecurity. She utilizes machine learning algorithms to predict and identify cyber threats based on patterns and anomalies in network traffic data. Her research reveals that using a combination of supervised and unsupervised learning algorithms significantly boosts the IDS's detection rate and reduces false positives, promising a more secure cyberspace.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "promote": {
+          "en-US": false
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "47D9q3Gu5KJWaCE2O2eilj",
+        "type": "Asset",
+        "createdAt": "2023-07-24T05:56:09.839Z",
+        "updatedAt": "2023-07-24T05:56:19.686Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-24T05:56:19.686Z",
+        "firstPublishedAt": "2023-07-24T05:56:19.686Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Jane Doe"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/39gj7q5bbdj9/47D9q3Gu5KJWaCE2O2eilj/0f10e86178a9884354a9358e9ce69bc5/profile.jpg",
+            "details": {
+              "size": 49480,
+              "image": {
+                "width": 610,
+                "height": 610
+              }
+            },
+            "fileName": "profile.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "7mhHbnXv6ZQ9X4N66KLISj",
+        "type": "Asset",
+        "createdAt": "2023-07-24T06:07:41.284Z",
+        "updatedAt": "2023-07-24T06:08:44.143Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-24T06:08:44.143Z",
+        "firstPublishedAt": "2023-07-24T06:08:44.143Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "John Smith"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/39gj7q5bbdj9/7mhHbnXv6ZQ9X4N66KLISj/16c0dca765739029e1e0813debe2ef52/student.jpg",
+            "details": {
+              "size": 45678,
+              "image": {
+                "width": 600,
+                "height": 600
+              }
+            },
+            "fileName": "student.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "48bCRm681c9pxPtcN9JU4t",
+        "type": "Asset",
+        "createdAt": "2023-07-24T06:12:35.884Z",
+        "updatedAt": "2023-07-24T06:12:44.166Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2023-07-24T06:12:44.166Z",
+        "firstPublishedAt": "2023-07-24T06:12:44.166Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Robot with human features"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/39gj7q5bbdj9/48bCRm681c9pxPtcN9JU4t/d9de9a08237ccdc418f8c504c83fd6c2/robot.jpg",
+            "details": {
+              "size": 110587,
+              "image": {
+                "width": 1200,
+                "height": 800
+              }
+            },
+            "fileName": "robot.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "39gj7q5bbdj9"
+          }
+        },
+        "id": "6DEl3fB0WDG6Z98WEOHXKZ",
+        "type": "Asset",
+        "createdAt": "2023-07-24T06:21:10.080Z",
+        "updatedAt": "2023-07-24T06:21:25.365Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2023-07-24T06:21:25.365Z",
+        "firstPublishedAt": "2023-07-24T06:21:25.365Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1XrWSBnXbdQLlIL8SM5YVd"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Large group of people in room watching speaker"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/39gj7q5bbdj9/6DEl3fB0WDG6Z98WEOHXKZ/34dcf8a212633b4ede382923f4aa73d2/event.jpg",
+            "details": {
+              "size": 94783,
+              "image": {
+                "width": 1000,
+                "height": 667
+              }
+            },
+            "fileName": "event.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
     }
   ],
   "locales": [
@@ -2348,13 +4879,13 @@
       "optional": false,
       "sys": {
         "type": "Locale",
-        "id": "22SF6BoJIXCJII5rtTLGSK",
+        "id": "7h6b4XxMy6v07ADz2zbEsY",
         "version": 1,
         "space": {
           "sys": {
             "type": "Link",
             "linkType": "Space",
-            "id": "x3kwjvrmcw7n"
+            "id": "39gj7q5bbdj9"
           }
         },
         "environment": {
@@ -2362,7 +4893,7 @@
             "type": "Link",
             "linkType": "Environment",
             "id": "master",
-            "uuid": "63d9b1c5-80c2-4dcb-aef2-e574f83087c0"
+            "uuid": "a6cf027f-4889-454c-8620-89f64cf549ee"
           }
         },
         "createdBy": {
@@ -2372,7 +4903,7 @@
             "id": "1XrWSBnXbdQLlIL8SM5YVd"
           }
         },
-        "createdAt": "2022-03-04T20:40:33Z",
+        "createdAt": "2023-07-24T05:50:35Z",
         "updatedBy": {
           "sys": {
             "type": "Link",
@@ -2380,7 +4911,7 @@
             "id": "1XrWSBnXbdQLlIL8SM5YVd"
           }
         },
-        "updatedAt": "2022-03-04T20:40:33Z"
+        "updatedAt": "2023-07-24T05:50:35Z"
       }
     }
   ],

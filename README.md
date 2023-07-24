@@ -1,24 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a web portfolio intended for academic students. Anyone is free to fork this project in order to create their own website. As my personal needs for an academic website change, there may be some breaking changes if you intend to get the latest. It's advised to avoid changing code values in order to make sure you get all the cool features as they come.
 
 ## Getting Started
+
+### Install the contentful cli
+
+```sh
+brew install contentful-cli
+```
+
+[View additional installation methods](https://www.contentful.com/developers/docs/tutorials/cli/installation/)
+
+### Setup your environment
+
+Copy the environment variables from .env.example into a new file called `.env`. You'll need to get your access token, space id, and content delivery token from your contentful account. Once you've updated your environment variables run the following command to setup your content model in contentful.
+
+**Important**: Make sure that your contentful space is empty before running this command.
+
+```sh
+pnpm initialize
+```
+
+### Run the application locally
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
 

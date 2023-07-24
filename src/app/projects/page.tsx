@@ -35,21 +35,23 @@ const Projects = async () => {
           />
         </HomeRow>
       )}
-      <PageLayout.Container>
-        <HomeRow.Title>All Projects</HomeRow.Title>
-        <PageLayout.List>
-          {projectList.map((x) => (
-            <Article
-              image={x.img}
-              cta="View project"
-              title={x.name}
-              href={`/projects/${x.id}`}
-              summary={x.summary}
-              key={x.id}
-            />
-          ))}
-        </PageLayout.List>
-      </PageLayout.Container>
+      {Boolean(projectList.length) && (
+        <PageLayout.Container>
+          <HomeRow.Title>All Projects</HomeRow.Title>
+          <PageLayout.List>
+            {projectList.map((x) => (
+              <Article
+                image={x.img}
+                cta="View project"
+                title={x.name}
+                href={`/projects/${x.id}`}
+                summary={x.summary}
+                key={x.id}
+              />
+            ))}
+          </PageLayout.List>
+        </PageLayout.Container>
+      )}
     </PageLayout>
   );
 };

@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "initialize": "node ./contentful/setup.js"
+    "initialize": "node ./contentful/setup.js",
+    "download-content": "node ./contentful/download.js"
   },
   "dependencies": {
     "@citation-js/core": "^0.6.5",

@@ -13,7 +13,7 @@ const main = async () => {
   const configPath = path.join(__dirname, "./contentful-export.json");
 
   exec(
-    `contentful space import --space-id=${process.env.CONTENTFUL_SPACE_ID} --environment-id=master --mt=${process.env.CONTENTFUL_ACCESS_TOKEN} --content-file=${configPath}`,
+    `contentful space export --space-id=${process.env.CONTENTFUL_SPACE_ID} --environment-id=master --mt=${process.env.CONTENTFUL_ACCESS_TOKEN} --content-file=${configPath} --skip-roles --download-assets`,
     (err, stdout) => {
       if (err) console.log(err);
       console.log(stdout);

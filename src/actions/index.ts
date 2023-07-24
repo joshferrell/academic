@@ -185,7 +185,7 @@ const fetchEntries = async (
       });
 
       const response = await fetch(request, {
-        next: { tags: [config.params["content_type"]], revalidate: 60 },
+        next: { revalidate: 120 },
       });
       const data = await response.json();
 
