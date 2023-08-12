@@ -148,7 +148,6 @@ const options = {
 };
 
 const renderRichToReact = (document: any) => {
-  console.log(document.content[0].content);
   return documentToReactComponents(document, options);
 };
 

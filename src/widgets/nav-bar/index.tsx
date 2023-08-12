@@ -4,7 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
 import { Box } from "~/widgets/box";
 import * as styles from "./styles.css";
-import { ChevronDown } from "lucide-react";
+import { ChevronDownIcon } from "lucide-react";
 import { Project } from "~/actions/types";
 import { ProjectCard } from "~/widgets/project-card";
 
@@ -97,7 +97,7 @@ const NavBar = ({ project }: PropTypes) => {
               style={{ display: "flex", gap: "4px", alignItems: "center" }}
             >
               Research
-              <ChevronDown size={20} strokeWidth={3} />
+              <ChevronDownIcon size={20} strokeWidth={3} />
             </NavigationMenu.Trigger>
             <NavigationMenu.Content className={styles.Content}>
               <Box

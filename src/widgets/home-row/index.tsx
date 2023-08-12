@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Box } from "../box";
 import * as styles from "./style.css";
-import { ArrowRight } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import { vars } from "~/theme.css";
 
 type RowBackgrounds = "primary" | "surface-01" | "white" | "blur";
@@ -50,7 +50,7 @@ const CTA = ({
     justifyContent="flex-start"
   >
     <div>{children}</div>
-    <ArrowRight
+    <ArrowRightIcon
       size={vars.font.textSize.large}
       style={{
         display: "inline-block",

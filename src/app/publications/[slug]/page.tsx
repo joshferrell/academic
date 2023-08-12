@@ -1,4 +1,4 @@
-import { Book, Calendar } from "lucide-react";
+import { BookMinusIcon, CalendarIcon } from "lucide-react";
 import type { Metadata } from "next";
 
 import { fetchPublication, fetchPublicationList } from "~/actions/publication";
@@ -112,7 +112,7 @@ const Page = async ({ params }: PropTypes) => {
                     alignItems="flex-start"
                     style={{ gridTemplateColumns: "24px 1fr" }}
                   >
-                    <Book size={20} style={{ marginTop: "2px" }} />
+                    <BookMinusIcon size={20} style={{ marginTop: "2px" }} />
                     {publication.publication}
                   </Box>
                 )}
@@ -123,7 +123,7 @@ const Page = async ({ params }: PropTypes) => {
                     alignItems="flex-start"
                     style={{ gridTemplateColumns: "24px 1fr" }}
                   >
-                    <Calendar size={20} style={{ marginTop: "2px" }} />
+                    <CalendarIcon size={20} style={{ marginTop: "2px" }} />
                     {publication.date}
                   </Box>
                 )}

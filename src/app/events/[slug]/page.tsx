@@ -11,7 +11,7 @@ import renderRichToReact from "~/widgets/rich-text";
 import Card from "~/widgets/card";
 import { ButtonLink } from "~/widgets/button-link";
 import { Box } from "~/widgets/box";
-import { CalendarIcon, MapPinIcon, Video } from "lucide-react";
+import { CalendarIcon, MapPinIcon, VideoIcon } from "lucide-react";
 import Link from "next/link";
 import { RelatedProjects } from "~/widgets/project-card";
 
@@ -158,7 +158,7 @@ const Page = async ({ params }: PropTypes) => {
                     alignItems="flex-start"
                     style={{ gridTemplateColumns: "24px 1fr" }}
                   >
-                    <Video size={20} style={{ marginTop: "2px" }} />
+                    <VideoIcon size={20} style={{ marginTop: "2px" }} />
                     <Link href={event.recording}>View Recording</Link>
                   </Box>
                 )}

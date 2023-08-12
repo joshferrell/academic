@@ -1,4 +1,4 @@
-import { Calendar, Link, Linkedin, Mail } from "lucide-react";
+import { CalendarIcon, LinkIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import { Box } from "../box";
 import { SrOnly } from "../sr-only";
 import { ColorSystem } from "~/sprinkles/index.css";
@@ -17,13 +17,13 @@ type PropTypes = {
 const getIcon = (icon: SocialIconType, size: number) => {
   switch (icon) {
     case "Linkedin":
-      return <Linkedin aria-hidden="true" size={size} />;
+      return <LinkedinIcon aria-hidden="true" size={size} />;
     case "Mail":
-      return <Mail aria-hidden="true" size={size} />;
+      return <MailIcon aria-hidden="true" size={size} />;
     case "Calendar":
-      return <Calendar aria-hidden="true" size={size} />;
+      return <CalendarIcon aria-hidden="true" size={size} />;
     default:
-      return <Link aria-hidden="true" size={size} />;
+      return <LinkIcon aria-hidden="true" size={size} />;
   }
 };
 
