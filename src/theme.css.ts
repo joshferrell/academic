@@ -140,3 +140,4 @@ globalStyle("th, td", {
   borderColor: vars.color.borders.primary
 });
 globalStyle("a:hover", { color: vars.color.link["primary-hover"] });
+globalStyle('.citation-item div', { display: 'inline' })

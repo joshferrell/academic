@@ -30,12 +30,15 @@ const PublicationList = ({
           style={{ listStyleType: "none" }}
         >
           {pubs.map((x) => (
-            <Box
-              as="li"
-              textStyle="large"
-              key={x.id}
-              dangerouslySetInnerHTML={{ __html: x.citationHTML }}
-            />
+            <Box as="li" textStyle="large" key={x.id}>
+              <span
+                className="citation-item"
+                dangerouslySetInnerHTML={{ __html: x.citationHTML }}
+              />
+              {x.status !== "Published" && x.status !== "In Preparation" && (
+                <span>[{x.status}]</span>
+              )}
+            </Box>
           ))}
         </Box>
       </Category>

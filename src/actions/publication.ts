@@ -60,6 +60,7 @@ export const fetchPublicationList = async (
       "fields.publicationType",
       "fields.bibtex",
       "fields.title",
+      'fields.status',
       "sys.id",
     ],
   });
