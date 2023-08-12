@@ -1,4 +1,4 @@
-import { fetchPostList } from "~/actions";
+import { fetchPostList } from "~/actions/post";
 
 import PageLayout from "~/widgets/layout";
 import { Article } from "~/widgets/article";

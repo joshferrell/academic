@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { fetchTag } from "~/actions";
+import { fetchTag } from "~/actions/tags";
 
 import PageLayout from "~/widgets/layout";
 import HomeRow from "~/widgets/home-row";

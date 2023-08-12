@@ -3,7 +3,7 @@ import { MarginSystem, WidthSystem, sprinkles } from "~/sprinkles/index.css";
 import classNames from "classnames";
 import { button } from "./styles.css";
 
-type PropTypes = MarginSystem &
+export type ButtonLinkProps = MarginSystem &
   WidthSystem & {
     href: string;
     isExternal?: boolean;
@@ -19,7 +19,7 @@ export const ButtonLink = ({
   variant = "primary",
   size = "normal",
   ...classProps
-}: PropTypes) => {
+}: ButtonLinkProps) => {
   const styles = classNames(button({ variant, size }), sprinkles(classProps));
 
   if (!isExternal) {

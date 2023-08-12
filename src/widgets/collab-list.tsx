@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Collaborator } from "~/actions";
+import type { Collaborator } from "~/actions/types";
 
 import { Box } from "~/widgets/box";
 

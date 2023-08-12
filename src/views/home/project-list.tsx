@@ -1,4 +1,4 @@
-import { fetchFeaturedProject, fetchProjectList } from "~/actions";
+import { fetchFeaturedProject, fetchProjectList } from "~/actions/project";
 
 import { Box } from "~/widgets/box";
 import HomeRow from "~/widgets/home-row";

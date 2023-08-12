@@ -1,7 +1,7 @@
 import { Book, Calendar } from "lucide-react";
 import type { Metadata } from "next";
 
-import { fetchPublication, fetchPublicationList } from "~/actions";
+import { fetchPublication, fetchPublicationList } from "~/actions/publication";
 import { Box } from "~/widgets/box";
 import { ButtonLink } from "~/widgets/button-link";
 import Card from "~/widgets/card";
@@ -105,15 +105,17 @@ const Page = async ({ params }: PropTypes) => {
                 style={{ border: "none", borderTop: "1px solid" }}
               />
               <PageLayout.List>
-                <Box
-                  display="grid"
-                  gap={0.5}
-                  alignItems="flex-start"
-                  style={{ gridTemplateColumns: "24px 1fr" }}
-                >
-                  <Book size={20} style={{ marginTop: "2px" }} />
-                  {publication.publication}
-                </Box>
+                {publication.publication && (
+                  <Box
+                    display="grid"
+                    gap={0.5}
+                    alignItems="flex-start"
+                    style={{ gridTemplateColumns: "24px 1fr" }}
+                  >
+                    <Book size={20} style={{ marginTop: "2px" }} />
+                    {publication.publication}
+                  </Box>
+                )}
                 {publication.date && (
                   <Box
                     display="grid"
@@ -133,7 +135,7 @@ const Page = async ({ params }: PropTypes) => {
                     bg="surface-01"
                     borderRadius="lg"
                   >
-                    {publication.underReview ? "Under Review" : "Published"}
+                    {publication.status}
                   </Box>
                 </Box>
               </PageLayout.List>

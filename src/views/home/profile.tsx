@@ -1,4 +1,4 @@
-import { fetchStudent } from "~/actions";
+import { fetchStudent } from "~/actions/student";
 
 import { Box } from "~/widgets/box";
 import { ButtonLink } from "~/widgets/button-link";

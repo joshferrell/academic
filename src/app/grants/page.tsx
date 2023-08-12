@@ -1,4 +1,5 @@
-import { fetchGrantList, sortGrants, type Grant } from "~/actions";
+import { fetchGrantList, sortGrants } from "~/actions/grant";
+import type { Grant } from "~/actions/types";
 import GrantList from "~/views/grant-list";
 import PageLayout from "~/widgets/layout";
 

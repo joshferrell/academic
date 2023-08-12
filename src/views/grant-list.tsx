@@ -1,4 +1,4 @@
-import { type Grant } from "~/actions";
+import { type Grant } from "~/actions/types";
 
 import { Box } from "~/widgets/box";
 import { ButtonLink } from "~/widgets/button-link";
@@ -50,6 +50,7 @@ const GrantList = ({ grantList, showProjects = false }: PropTypes) => (
                 </Box>
                 <Box textStyle="small" color="highlight">
                   {x.yearAwarded}
+                  {Boolean(x.endYear) && <span>&nbsp;-&nbsp;{x.endYear}</span>}
                 </Box>
                 {x.project && showProjects && (
                   <ButtonLink

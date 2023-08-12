@@ -1,4 +1,5 @@
-import { fetchGrantList, fetchPublicationList, fetchSidebar } from "~/actions";
+import { fetchGrantList, fetchSidebar } from "~/actions/grant";
+import { fetchPublicationList } from "~/actions/publication";
 
 import { Box } from "~/widgets/box";
 import HomeRow from "~/widgets/home-row";

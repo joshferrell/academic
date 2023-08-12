@@ -1,4 +1,5 @@
-import { fetchPresentationList, type Presentation } from "~/actions";
+import { fetchPresentationList } from "~/actions/presentation";
+import type { Presentation } from "~/actions/types";
 
 import PageLayout from "~/widgets/layout";
 import { Box } from "~/widgets/box";

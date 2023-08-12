@@ -4,7 +4,7 @@ import { SrOnly } from "../sr-only";
 import { ColorSystem } from "~/sprinkles/index.css";
 
 import * as styles from "./style.css";
-import { SocialIcon as SocialIconType } from "~/actions";
+import { SocialIcon as SocialIconType } from "~/actions/types";
 
 type PropTypes = {
   icon: SocialIconType;

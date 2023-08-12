@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { fetchPost, fetchPostList } from "~/actions";
+import { fetchPost, fetchPostList } from "~/actions/post";
 
 import PageLayout from "~/widgets/layout";
-import HomeRow from "~/widgets/home-row";
 import { Box } from "~/widgets/box";
 import { ButtonLink } from "~/widgets/button-link";
 import renderRichToReact from "~/widgets/rich-text";

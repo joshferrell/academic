@@ -4,14 +4,8 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import Link from "next/link";
 import { Box } from "~/widgets/box";
 import * as styles from "./styles.css";
-import {
-  AwardIcon,
-  BookOpenIcon,
-  BriefcaseIcon,
-  ChevronDown,
-  Tv2Icon,
-} from "lucide-react";
-import { Project } from "~/actions";
+import { ChevronDown } from "lucide-react";
+import { Project } from "~/actions/types";
 import { ProjectCard } from "~/widgets/project-card";
 
 type LinkProps = {
@@ -114,7 +108,6 @@ const NavBar = ({ project }: PropTypes) => {
                 style={{ gridTemplateColumns: "280px 320px" }}
                 padding={1}
               >
-                {project && <ProjectCard project={project} />}
                 <Box
                   as={NavigationMenu.NavigationMenuList}
                   display="flex"
@@ -129,6 +122,9 @@ const NavBar = ({ project }: PropTypes) => {
                     <Item key={x.title} {...x} />
                   ))}
                 </Box>
+                {project && (
+                  <ProjectCard style={{ order: "-1" }} project={project} />
+                )}
               </Box>
             </NavigationMenu.Content>
           </NavigationMenu.Item>

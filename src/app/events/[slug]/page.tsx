@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { ics } from "calendar-link";
-import { fetchPresentation, fetchPresentationList } from "~/actions";
+import {
+  fetchPresentation,
+  fetchPresentationList,
+} from "~/actions/presentation";
 
 import PageLayout from "~/widgets/layout";
 import HomeRow from "~/widgets/home-row";

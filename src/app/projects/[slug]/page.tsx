@@ -11,7 +11,7 @@ import {
   fetchFeaturedProject,
   fetchProject,
   fetchProjectList,
-} from "~/actions";
+} from "~/actions/project";
 import { ButtonLink } from "~/widgets/button-link";
 import { Box } from "~/widgets/box";
 import { CollabList } from "~/widgets/collab-list";

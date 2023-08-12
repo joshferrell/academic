@@ -31,6 +31,7 @@ export const [themeClass, vars] = createTheme({
       "surface-01": palette.primary[200],
       inverted: palette.primary[800],
       footer: palette.neutral[200],
+      subtle: palette.primary[100]
     },
     text: {
       body: palette.primary[800],
@@ -129,11 +130,13 @@ globalStyle("a", {
   transition: "all 0.1s ease-in",
 });
 globalStyle("table", {
-  border: "1px solid black",
+  border: "1px solid",
+  borderColor: vars.color.borders.primary,
   borderCollapse: "collapse",
 });
 globalStyle("th, td", {
   padding: `${vars.space[0.125]} ${vars.space[0.75]}`,
-  border: "1px solid black",
+  border: "1px solid",
+  borderColor: vars.color.borders.primary
 });
 globalStyle("a:hover", { color: vars.color.link["primary-hover"] });

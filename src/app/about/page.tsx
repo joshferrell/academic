@@ -1,4 +1,4 @@
-import { fetchStudent } from "~/actions";
+import { fetchStudent } from "~/actions/student";
 
 import Image from "next/image";
 import { FileTextIcon, GraduationCapIcon } from "lucide-react";

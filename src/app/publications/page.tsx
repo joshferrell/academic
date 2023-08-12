@@ -1,4 +1,4 @@
-import { fetchPublicationList } from "~/actions";
+import { fetchPublicationList } from "~/actions/publication";
 
 import PageLayout from "~/widgets/layout";
 import PublicationList from "~/views/publication-list";

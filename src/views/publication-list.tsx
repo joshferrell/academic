@@ -1,4 +1,4 @@
-import { type Publication } from "~/actions";
+import type { Publication } from "~/actions/types";
 
 import Category from "~/widgets/category";
 import { Box } from "~/widgets/box";

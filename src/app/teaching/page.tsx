@@ -1,6 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
-import { fetchTeaching } from "~/actions";
+import { fetchTeaching } from "~/actions/teaching";
 import { Box } from "~/widgets/box";
 import { CollabList } from "~/widgets/collab-list";
 

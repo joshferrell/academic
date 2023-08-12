@@ -1,4 +1,5 @@
-import { fetchFeaturedProject, fetchStudent } from "~/actions";
+import { fetchFeaturedProject } from "~/actions/project";
+import { fetchStudent } from "~/actions/student";
 
 import { Playfair_Display, Inter } from "next/font/google";
 import "normalize.css";

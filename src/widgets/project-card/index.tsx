@@ -1,19 +1,30 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Project } from "~/actions";
+
+import { Project } from "~/actions/types";
+
 import { Box } from "../box";
 import * as styles from "./styles.css";
 import HomeRow from "../home-row";
 import { Article } from "../article";
 
-type PropTypes = {
+type PropTypes = Omit<React.HTMLProps<HTMLDivElement>, "size"> & {
   project: Project;
   size?: "medium" | "large";
 };
 
-export const ProjectCard = ({ project, size = "medium" }: PropTypes) => {
+export const ProjectCard = ({
+  project,
+  size = "medium",
+  style,
+  ...htmlAttributes
+}: PropTypes) => {
   return (
-    <article className={styles.Article({ size })} style={{ flex: "25%" }}>
+    <article
+      className={styles.Article({ size })}
+      style={{ flex: "25%", ...style }}
+      {...htmlAttributes}
+    >
       <Image
         className={styles.Image}
         src={project.img.src}

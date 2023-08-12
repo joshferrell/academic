@@ -1,6 +1,5 @@
-import { fetchFeaturedProject, fetchProjectList } from "~/actions";
+import { fetchFeaturedProject, fetchProjectList } from "~/actions/project";
 
-import { Box } from "~/widgets/box";
 import { Article } from "~/widgets/article";
 import PageLayout from "~/widgets/layout";
 import HomeRow from "~/widgets/home-row";

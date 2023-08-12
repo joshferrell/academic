@@ -11,7 +11,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ["images.ctfassets.net"],
+    domains: ["images.ctfassets.net", 'assets.ctfassets.net'],
   }
 };
 
