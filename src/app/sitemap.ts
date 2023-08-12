@@ -4,7 +4,6 @@ import { ContentType } from '~/actions/types';
 
 const dynamicContent: { [x: string]: ContentType } = {
     projects: 'project',
-    grants: 'grants-and-awards',
     events: 'event',
     publications: 'publication',
     posts: 'post',
@@ -30,10 +29,6 @@ const fetchDynamicContent = async (path: string, type: ContentType) => {
     })).concat([basePage]);
 }
 
-const getPublications = () => {};
-const getTags = () => {};
-const getGrants = () => {};
-
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
     const hostName = process.env.HOST_NAME!;
 
@@ -42,11 +37,12 @@ const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
     );
 
     return [
-        { url: '', lastModified: new Date() },
+        { url: '/', lastModified: new Date() },
         { url: '/about', lastModified: new Date() },
         { url: '/teaching', lastModified: new Date() },
+        { url: '/grants', lastModified: new Date() }
     ].concat(promiseList.flat(1)).map(({ url, lastModified }) => ({
-        url: hostName + url,
+        url: hostName.replace(/\/$/, '') + url,
         lastModified
     }));
 }

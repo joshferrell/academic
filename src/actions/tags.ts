@@ -14,8 +14,23 @@ export const formatTags = (tagList: any): Tag[] => {
     .map((x: any) => ({
       title: x.fields.title,
       id: x.sys.id,
+      description: x.fields.description
     }));
 };
+
+export const fetchTags = async (): Promise<Tag[]> => {
+  const entries = await fetchEntries('tags', {
+    limit: 100,
+    select: [
+      'fields.title',
+      'sys.id',
+      'fields.description'
+    ]
+  });
+
+  if (!entries.length) return notFound();
+  return formatTags(entries);
+}
 
 export const fetchTag = async (id: string): Promise<TagPage> => {
   const entries = await fetchEntries("tags", {
