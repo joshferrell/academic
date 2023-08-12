@@ -51,7 +51,7 @@ const CTA = ({
   >
     <div>{children}</div>
     <ArrowRightIcon
-      size={vars.font.textSize.large}
+      size="1.125rem"
       style={{
         display: "inline-block",
         marginBottom: "-0.125rem",
