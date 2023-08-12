@@ -1,3 +1,5 @@
+import { ProcessNodeDefinitions, Parser } from "html-to-react";
+import Link from "next/link";
 import { fetchGrantList, fetchSidebar } from "~/actions/grant";
 import { fetchPublicationList } from "~/actions/publication";
 
@@ -9,6 +11,7 @@ import { ButtonLink } from "~/widgets/button-link";
 import renderRichToReact from "~/widgets/rich-text";
 
 import { vars } from "~/theme.css";
+import { PublicationListing } from "~/widgets/publication-listing";
 
 const Publications = async () => {
   const [publications, grants, sidebar] = await Promise.all([
@@ -36,21 +39,7 @@ const Publications = async () => {
                 >
                   {category}
                 </Box>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: vars.space[2],
-                  }}
-                >
-                  {publications.map((entry) => (
-                    <Box
-                      textStyle="large"
-                      dangerouslySetInnerHTML={{ __html: entry.citationHTML }}
-                      key={entry.id}
-                    />
-                  ))}
-                </div>
+                <PublicationListing publicationList={publications} />
               </section>
             ))}
           </Box>
