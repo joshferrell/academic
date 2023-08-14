@@ -1,18 +1,65 @@
-import { fetchTeaching } from "~/actions/teaching";
+import { Metadata } from "next";
+import { fetchTeaching, fetchTeachingList } from "~/actions/teaching";
 import { Box } from "~/widgets/box";
 import { CollabList } from "~/widgets/collab-list";
 
 import PageLayout from "~/widgets/layout";
 import renderRichToReact from "~/widgets/rich-text";
 
-export const metadata = {
-  title: `${process.env.STUDENT_NAME} | Teaching`,
-  description: `Browse ${process.env.STUDENT_NAME}'s collection of teaching experience.`,
-};
-
 type PropTypes = {
   params: {
     slug: string;
+  };
+};
+
+export const generateStaticParams = async () => {
+  const teachingList = await fetchTeachingList();
+  return teachingList.map(({ id }) => ({ slug: id }));
+};
+
+export const generateMetadata = async ({
+  params,
+}: PropTypes): Promise<Metadata> => {
+  const slug = params?.slug || "";
+  const teaching = await fetchTeaching(slug);
+  if (!teaching) return {};
+
+  const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
+    teaching.title
+  )}`;
+
+  const url = `${process.env.HOST_NAME}/teaching/${slug}`;
+
+  return {
+    title: `${process.env.STUDENT_NAME} | ${teaching.title}`,
+    alternates: {
+      canonical: url,
+    },
+    description: teaching.description,
+    twitter: {
+      card: "summary_large_image",
+      title: teaching.title,
+      description: teaching.description,
+      images: {
+        url: ogImage,
+        alt: "",
+      },
+    },
+    openGraph: {
+      title: teaching.title,
+      type: "article",
+      description: teaching.description,
+      url,
+      locale: "en-US",
+      images: [
+        {
+          url: ogImage,
+          alt: "",
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
   };
 };
 

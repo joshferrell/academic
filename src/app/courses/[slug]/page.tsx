@@ -30,7 +30,7 @@ export const generateMetadata = async ({
 
   const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
     course.title
-  )}&subtitle=${encodeURIComponent(course.time)}`;
+  )}&subtitle=${encodeURIComponent(course.courseTag)}`;
 
   return {
     title: `${process.env.STUDENT_NAME} | ${course.title}`,
