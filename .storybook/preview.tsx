@@ -30,7 +30,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <div
-        className={`${bodyFont.variable} ${headingFont.variable} ${themeClass}`}
+        className={`${bodyFont.className} ${bodyFont.variable} ${headingFont.className} ${headingFont.variable} ${themeClass}`}
       >
         <Story />
       </div>

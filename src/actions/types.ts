@@ -1,4 +1,8 @@
 import { type EntryFieldTypes } from 'contentful';
+import dynamicIconImports from "lucide-react/dynamicIconImports";
+
+export type LucidIconType = keyof typeof dynamicIconImports;
+
 
 export type Tag = {
   id: string;
@@ -12,8 +16,6 @@ export type TagPage = Tag & {
   publicationList?: { [category: string]: Publication[] };
   postList: Post[];
 };
-
-export type SocialIcon = "Linkedin" | "Mail" | "Calendar";
 
 export type Collaborator = {
   name: string;
@@ -76,6 +78,16 @@ export type Post = {
   projectList?: Project[];
 };
 
+export type Feedback = {
+  id: string;
+  title: string;
+  subtitle?: string;
+  feedback: string;
+  highlight?: string;
+  photo?: { src: string; alt: string };
+  feature: boolean;
+}
+
 export type Presentation = {
   id: string;
   title: string;
@@ -118,7 +130,7 @@ export type Student = {
   interests?: string[];
   education?: Education[];
   social: {
-    icon: SocialIcon;
+    icon: LucidIconType;
     link: string;
     title: string;
     description: string;
@@ -130,10 +142,30 @@ export type Student = {
 };
 
 export type Teaching = {
+  id: string;
+  icon: LucidIconType;
   title: string;
+  order: number;
+  description: string;
   content: EntryFieldTypes.RichText;
   mentees: Collaborator[];
 };
+
+export type Course = {
+  id: string;
+  title: string;
+  summary: string;
+  syllabus: string;
+  classNumber?: string;
+  planned: boolean;
+  courseTag: string;
+  role: string;
+  time: string;
+  location: string;
+  size?: number;
+  feedback?: Feedback[];
+  description?: EntryFieldTypes.RichText;
+}
 
 export type ContentType =
   | "project"
@@ -144,4 +176,5 @@ export type ContentType =
   | "publication"
   | "grants-and-awards"
   | "post"
+  | "class"
   | "event";

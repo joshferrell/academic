@@ -1,5 +1,7 @@
 import { fetchFeaturedProject } from "~/actions/project";
 import { fetchStudent } from "~/actions/student";
+import { fetchTeachingList } from "~/actions/teaching";
+import { fetchCourseList } from "~/actions/courses";
 
 import { Playfair_Display, Inter } from "next/font/google";
 import "normalize.css";
@@ -72,10 +74,14 @@ const NavLink = ({ href, text }: { href: string; text: string }) => (
 );
 
 const RootLayout = async ({ children }: RootLayoutProps) => {
-  const [project, student] = await Promise.all([
+  const [project, student, teaching, courseList] = await Promise.all([
     fetchFeaturedProject(),
     fetchStudent(),
+    fetchTeachingList(),
+    fetchCourseList(4, true),
   ]);
+
+  console.log(courseList);
 
   const year = new Date().getFullYear();
 
@@ -102,7 +108,11 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
           >
             Skip to content.
           </a>
-          <NavBar project={project} />
+          <NavBar
+            project={project}
+            experience={teaching}
+            courseList={courseList}
+          />
         </header>
         {children}
         <Box as="footer" marginTop="auto" paddingY={3} paddingX={2} bg="footer">

@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { fetchPublication, fetchPublicationList } from "~/actions/publication";
 import { Box } from "~/widgets/box";
 import { ButtonLink } from "~/widgets/button-link";
-import Card from "~/widgets/card";
+import Card, { DefinitionList } from "~/widgets/card";
 import HomeRow from "~/widgets/home-row";
 
 import PageLayout from "~/widgets/layout";
@@ -68,6 +68,29 @@ const Page = async ({ params }: PropTypes) => {
   const slug = params?.slug || "";
   const publication = await fetchPublication(slug);
 
+  const definitions: DefinitionList[] = [
+    {
+      term: "Status:",
+      definition: { value: publication.status, isPill: true },
+    },
+  ];
+
+  if (publication.publication) {
+    definitions.push({
+      term: "Publication",
+      icon: "book",
+      definition: { value: publication.publication },
+    });
+  }
+
+  if (publication.date) {
+    definitions.push({
+      term: "Published Date",
+      icon: "calendar",
+      definition: { value: publication.date },
+    });
+  }
+
   return (
     <PageLayout>
       <PageLayout.Header
@@ -99,46 +122,12 @@ const Page = async ({ params }: PropTypes) => {
               </Box>
               <Box
                 as="hr"
-                marginTop={1}
-                marginBottom={2}
+                marginTop={2}
+                marginBottom={3}
                 color="soft"
                 style={{ border: "none", borderTop: "1px solid" }}
               />
-              <PageLayout.List>
-                {publication.publication && (
-                  <Box
-                    display="grid"
-                    gap={0.5}
-                    alignItems="flex-start"
-                    style={{ gridTemplateColumns: "24px 1fr" }}
-                  >
-                    <BookMinusIcon size={20} style={{ marginTop: "2px" }} />
-                    {publication.publication}
-                  </Box>
-                )}
-                {publication.date && (
-                  <Box
-                    display="grid"
-                    gap={0.5}
-                    alignItems="flex-start"
-                    style={{ gridTemplateColumns: "24px 1fr" }}
-                  >
-                    <CalendarIcon size={20} style={{ marginTop: "2px" }} />
-                    {publication.date}
-                  </Box>
-                )}
-                <Box display="flex" gap={1} alignItems="flex-start">
-                  <div>Status:</div>
-                  <Box
-                    display="inline-block"
-                    paddingX={1}
-                    bg="surface-01"
-                    borderRadius="lg"
-                  >
-                    {publication.status}
-                  </Box>
-                </Box>
-              </PageLayout.List>
+              <Card.DefinitionList definitions={definitions} />
               {publication.link && (
                 <ButtonLink href={publication.link} marginTop={3} width="full">
                   View publication

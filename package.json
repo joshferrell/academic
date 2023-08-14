@@ -28,7 +28,7 @@
     "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/recipes": "^0.4.0",
     "@vanilla-extract/sprinkles": "^1.6.1",
-    "calendar-link": "^2.4.0",
+    "calendar-link": "2.5.1",
     "classnames": "^2.3.2",
     "contentful": "^10.1.0",
     "contentful-management": "10.32.0",

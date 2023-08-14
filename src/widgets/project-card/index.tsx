@@ -9,7 +9,7 @@ import HomeRow from "../home-row";
 import { Article } from "../article";
 
 type PropTypes = Omit<React.HTMLProps<HTMLDivElement>, "size"> & {
-  project: Project;
+  project: Pick<Project, "img" | "id" | "tags" | "name">;
   size?: "medium" | "large";
 };
 

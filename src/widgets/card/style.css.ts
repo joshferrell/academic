@@ -12,8 +12,8 @@ export const card = recipe({
     variant: {
       primary: {},
       secondary: {
-        backgroundColor: vars.color.background.inverted,
-        color: vars.color.text.inverted,
+        backgroundColor: vars.color.background.footer,
+        borderColor: 'transparent',
       },
     },
   },

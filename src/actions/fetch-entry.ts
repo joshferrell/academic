@@ -38,8 +38,8 @@ const fetchEntries = async (
       });
 
       const response = await fetch(request, {
-        next: { revalidate: 120 },
-        cache: 'force-cache',
+        // next: { revalidate: 120 },
+        // cache: 'force-cache',
       });
       const data = await response.json();
 

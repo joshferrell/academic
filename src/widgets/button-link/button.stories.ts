@@ -3,7 +3,6 @@ import { ButtonLink, ButtonLinkProps } from './index';
 
 const meta = {
     component: ButtonLink,
-    tags: ['autodocs']
 } satisfies Meta<ButtonLinkProps>;
 
 export default meta;

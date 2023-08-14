@@ -61,8 +61,50 @@ export const LinkItem = style([
       background: vars.color.background["surface-01"],
       color: `${vars.color.text.body} !important`,
     },
+    ':focus-within': {
+      background: vars.color.background["surface-01"],
+      color: `${vars.color.text.body} !important`,
+    }
   },
 ]);
+
+export const FooterLink = style([
+  sprinkles({
+    color: 'body',
+    paddingX: 1,
+    paddingY: .5,
+    display: 'block'
+  }),
+  {
+    textDecoration: 'none',
+    ':hover': {
+      textDecoration: 'underline',
+      color: vars.color.interactive.primaryHover
+    }
+  }
+])
+
+export const LinkItemIcon = style([
+  sprinkles({
+    padding: 0.5,
+    borderRadius: 'md',
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'footer'
+  }),
+  {
+    boxSizing: 'border-box',
+    color: vars.color.text.body,
+    height: '40px',
+    width: '40px',
+    selectors: {
+      [`${LinkItem}:focus-within &, ${LinkItem}:hover &`]: {
+        color: vars.color.text.highlight
+      }
+    }
+  }
+])
 
 export const Link = style([
   sprinkles({
@@ -94,7 +136,7 @@ export const Content = style({
   left: 0,
   color: vars.color.text.body,
   width: "100%",
-  height: "var(--radix-navigation-menu-viewport-height)",
+  // height: "var(--radix-navigation-menu-viewport-height)",
   "@media": {
     "screen and (min-width: 768px)": {
       width: "auto",
@@ -125,7 +167,7 @@ export const Viewport = style({
   boxSizing: "content-box",
   width: "100%",
   height: "var(--radix-navigation-menu-viewport-height)",
-  transition: "width, height, 300ms ease",
+  transition: "width, 300ms ease",
   selectors: {
     '&[data-state="open"]': {
       animation: `${scaleIn} 200ms ease`,

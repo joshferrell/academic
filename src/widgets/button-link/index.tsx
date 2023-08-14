@@ -36,3 +36,23 @@ export const ButtonLink = ({
     </a>
   );
 };
+
+export type ButtonProps = Omit<ButtonLinkProps, "href"> & {
+  onClick: () => void;
+};
+
+export const Button = ({
+  children,
+  variant = "primary",
+  size = "normal",
+  onClick,
+  ...classProps
+}: ButtonProps) => {
+  const styles = classNames(button({ variant, size }), sprinkles(classProps));
+
+  return (
+    <button className={styles} onClick={onClick}>
+      {children}
+    </button>
+  );
+};

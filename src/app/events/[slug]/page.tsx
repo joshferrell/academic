@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ics } from "calendar-link";
 import {
   fetchPresentation,
   fetchPresentationList,
@@ -8,12 +7,13 @@ import {
 import PageLayout from "~/widgets/layout";
 import HomeRow from "~/widgets/home-row";
 import renderRichToReact from "~/widgets/rich-text";
-import Card from "~/widgets/card";
+import Card, { type DefinitionList } from "~/widgets/card";
 import { ButtonLink } from "~/widgets/button-link";
 import { Box } from "~/widgets/box";
 import { CalendarIcon, MapPinIcon, VideoIcon } from "lucide-react";
 import Link from "next/link";
 import { RelatedProjects } from "~/widgets/project-card";
+import { EventLink } from "~/widgets/event-link";
 
 type PropTypes = {
   params: {
@@ -80,13 +80,23 @@ const Page = async ({ params }: PropTypes) => {
   const now = new Date();
   const isFutureEvent = new Date(event.date) > now;
 
-  const url = ics({
-    title: event.title,
-    description: event.briefSummary,
-    start: event.timeISO,
-    location: event.location,
-    duration: [1, "hour"],
-  });
+  const definitionList: DefinitionList[] = [
+    { term: "Time", icon: "calendar", definition: { value: event.time } },
+  ];
+
+  if (event.location)
+    definitionList.push({
+      term: "Location",
+      icon: "map-pin",
+      definition: { value: event.location },
+    });
+
+  if (event.recording)
+    definitionList.push({
+      term: "Recording",
+      icon: "video",
+      definition: { value: "View Recording", href: event.recording },
+    });
 
   return (
     <PageLayout>
@@ -125,48 +135,16 @@ const Page = async ({ params }: PropTypes) => {
               </Box>
               <Box
                 as="hr"
-                marginTop={1}
-                marginBottom={2}
+                marginTop={2}
+                marginBottom={3}
                 color="soft"
                 style={{ border: "none", borderTop: "1px solid" }}
               />
-              <PageLayout.List>
-                <Box
-                  display="grid"
-                  gap={0.5}
-                  alignItems="flex-start"
-                  style={{ gridTemplateColumns: "24px 1fr" }}
-                >
-                  <CalendarIcon size={20} style={{ marginTop: "2px" }} />
-                  {event.time}
-                </Box>
-                {event.location && (
-                  <Box
-                    display="grid"
-                    gap={0.5}
-                    alignItems="flex-start"
-                    style={{ gridTemplateColumns: "24px 1fr" }}
-                  >
-                    <MapPinIcon size={20} style={{ marginTop: "2px" }} />
-                    {event.location}
-                  </Box>
-                )}
-                {event.recording && (
-                  <Box
-                    display="grid"
-                    gap={0.5}
-                    alignItems="flex-start"
-                    style={{ gridTemplateColumns: "24px 1fr" }}
-                  >
-                    <VideoIcon size={20} style={{ marginTop: "2px" }} />
-                    <Link href={event.recording}>View Recording</Link>
-                  </Box>
-                )}
-              </PageLayout.List>
+              <Card.DefinitionList definitions={definitionList} />
               {isFutureEvent && (
-                <ButtonLink href={url} marginTop={3} width="full">
-                  Add to calendar
-                </ButtonLink>
+                <EventLink marginTop={3} width="full" event={event}>
+                  Add to Calendar
+                </EventLink>
               )}
             </Card>
           </PageLayout.Sidebar>
