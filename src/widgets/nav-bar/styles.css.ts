@@ -31,7 +31,7 @@ export const Root = style([
   }),
   {
     position: "relative",
-    width: "100vw",
+    width: "100%",
   },
 ]);
 
@@ -39,14 +39,16 @@ export const List = style([
   sprinkles({
     display: "flex",
     gap: [1, 4],
-    justifyContent: ["center", "flex-start"],
+    justifyContent: "center",
     flexDirection: "row",
     flexWrap: "wrap",
-    padding: 0,
+    paddingY: 0,
+    paddingX: [1, 0],
     margin: 0,
   }),
   {
     listStyleType: "none",
+    boxSizing: 'content-box'
   },
 ]);
 
@@ -164,6 +166,7 @@ export const Viewport = style({
   boxShadow:
     "rgb(255, 255, 255) 0px 0px 0px 0px, rgba(17, 24, 39, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
   borderRadius: "6px",
+  overflow: 'hidden',
   boxSizing: "content-box",
   width: "100%",
   height: "var(--radix-navigation-menu-viewport-height)",

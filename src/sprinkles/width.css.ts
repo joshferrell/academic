@@ -4,6 +4,7 @@ const properties = {
   full: "100%",
   container: "67rem",
   200: "200",
+  450: '450px',
   "30%": "30%",
 };
 

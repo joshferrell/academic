@@ -34,7 +34,8 @@ export const TeachingCard = ({
         flexDirection="column"
         padding={0}
         margin={0}
-        style={{ listStyleType: "none", width: "450px" }}
+        width={["full", 450]}
+        style={{ listStyleType: "none" }}
       >
         <Box paddingX={1} paddingY={1}>
           {experience.map(({ id, icon, title, description }) => (
