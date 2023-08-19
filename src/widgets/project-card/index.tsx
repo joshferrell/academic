@@ -13,12 +13,17 @@ type PropTypes = Omit<React.HTMLProps<HTMLDivElement>, "size"> & {
   size?: "medium" | "large";
 };
 
-export const ProjectCard = ({
+type ProjectCardProps = PropTypes & {
+  children: React.ReactNode;
+};
+
+export const ProjectCardBuilder = ({
   project,
   size = "medium",
   style,
+  children,
   ...htmlAttributes
-}: PropTypes) => {
+}: ProjectCardProps) => {
   return (
     <article
       className={styles.Article({ size })}
@@ -36,15 +41,19 @@ export const ProjectCard = ({
       <Box textStyle="base" className={styles.Subtitle}>
         {project.tags.length ? project.tags[0].title : "Project"}
       </Box>
-      <Box color="inverted">
-        <Link href={`/projects/${project.id}`} className={styles.Link}>
-          <span className={styles.LinkSpan} />
-          {project.name}
-        </Link>
-      </Box>
+      <Box color="inverted">{children}</Box>
     </article>
   );
 };
+
+export const ProjectCard = (props: PropTypes) => (
+  <ProjectCardBuilder {...props}>
+    <Link href={`/projects/${props.project.id}`} className={styles.Link}>
+      <span className={styles.LinkSpan} />
+      {props.project.name}
+    </Link>
+  </ProjectCardBuilder>
+);
 
 type RelatedPropTypes = {
   projectList?: Project[];

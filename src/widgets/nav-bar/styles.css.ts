@@ -73,8 +73,9 @@ export const LinkItem = style([
 export const FooterLink = style([
   sprinkles({
     color: 'body',
-    paddingX: 1,
+    paddingX: 3,
     paddingY: .5,
+    bg: 'footer',
     display: 'block'
   }),
   {
@@ -82,6 +83,10 @@ export const FooterLink = style([
     ':hover': {
       textDecoration: 'underline',
       color: vars.color.interactive.primaryHover
+    },
+    ':focus': {
+      outline: 'none',
+      background: vars.color.interactive.secondaryHover
     }
   }
 ])
