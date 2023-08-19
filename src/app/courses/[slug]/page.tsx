@@ -26,9 +26,9 @@ export const generateMetadata = async ({
   const course = await fetchCourse(slug);
   if (!course) return {};
 
-  const url = `${process.env.HOST_NAME}/courses/${slug}`;
+  const url = `/courses/${slug}`;
 
-  const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
+  const ogImage = `/og?title=${encodeURIComponent(
     course.title
   )}&subtitle=${encodeURIComponent(course.courseTag)}`;
 

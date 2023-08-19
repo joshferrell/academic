@@ -33,13 +33,13 @@ export const generateMetadata = async ({
   const presentation = await fetchPresentation(slug);
   if (!presentation) return {};
 
-  const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
+  const ogImage = `/og?title=${encodeURIComponent(
     presentation.title
   )}&subtitle=${encodeURIComponent(
     presentation.tags.length ? presentation.tags[0].title : ""
   )}`;
 
-  const url = `${process.env.HOST_NAME}/events/${slug}`;
+  const url = `/events/${slug}`;
 
   return {
     title: `${process.env.STUDENT_NAME} | ${presentation.title}`,

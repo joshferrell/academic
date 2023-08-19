@@ -36,13 +36,13 @@ export const generateMetadata = async ({
   const publication = await fetchPublication(slug);
   if (!publication) return {};
 
-  const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
+  const ogImage = `/og?title=${encodeURIComponent(
     publication.title
   )}&subtitle=${encodeURIComponent(
     publication.tags.length ? publication.tags[0].title : ""
   )}`;
 
-  const url = `${process.env.HOST_NAME}/publications/${slug}`;
+  const url = `/publications/${slug}`;
 
   return {
     title: `${process.env.STUDENT_NAME} | ${publication.title}`,

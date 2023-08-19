@@ -38,13 +38,13 @@ export const generateMetadata = async ({
   const project = await fetchProject(slug);
   if (!project) return {};
 
-  const ogImage = `${process.env.HOST_NAME}/og?title=${encodeURIComponent(
+  const ogImage = `/og?title=${encodeURIComponent(
     project.name
   )}&subtitle=${encodeURIComponent(
     project.tags.length ? project.tags[0].title : ""
   )}`;
 
-  const url = `${process.env.HOST_NAME}/projects/${slug}`;
+  const url = `/projects/${slug}`;
 
   return {
     title: `${process.env.STUDENT_NAME} | ${project.name}`,

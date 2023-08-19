@@ -28,6 +28,7 @@ const bodyFont = Inter({
 export const generateMetadata = async (): Promise<Metadata> => {
   const student = await fetchStudent();
   return {
+    metadataBase: new URL(process.env.HOST_NAME!),
     title: student.name,
     description: student.briefBio,
     keywords: student.interests,
@@ -80,8 +81,6 @@ const RootLayout = async ({ children }: RootLayoutProps) => {
     fetchTeachingList(),
     fetchCourseList(4, true),
   ]);
-
-  console.log(courseList);
 
   const year = new Date().getFullYear();
 
