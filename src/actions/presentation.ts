@@ -18,11 +18,7 @@ export const formatPresentation = (
     location: x.fields.location,
     briefSummary: x.fields.summary,
     presenters: x.fields.presenters,
-    date: new Date(x.fields.date as string).toLocaleString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }),
+    date: new Date(x.fields.date as string),
     time: new Date(x.fields.date as string).toLocaleDateString("en-US", {
       year: "numeric",
       month: "long",

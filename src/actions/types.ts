@@ -95,7 +95,7 @@ export type Presentation = {
   location: string;
   timeISO: string;
   briefSummary: string;
-  date: string;
+  date: Date;
   time: string;
   img?: { src: string; alt: string };
   description: EntryFieldTypes.RichText;

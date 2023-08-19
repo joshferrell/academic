@@ -51,7 +51,11 @@ const Presentations = async () => {
                     image={e.img}
                     title={e.title}
                     summary={e.briefSummary}
-                    date={e.date}
+                    date={e.date.toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                     href={`/events/${e.id}`}
                   />
                 ))}
@@ -69,7 +73,11 @@ const Presentations = async () => {
                     key={e.id}
                     title={e.title}
                     summary={e.briefSummary}
-                    date={e.date}
+                    date={e.date.toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                     image={e.img}
                     href={`/events/${e.id}`}
                   />

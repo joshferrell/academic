@@ -18,7 +18,11 @@ const Presentation = async () => {
             key={e.id}
             title={e.title}
             summary={e.briefSummary}
-            date={e.date}
+            date={e.date.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
             href={`/events/${e.id}`}
           />
         ))}
